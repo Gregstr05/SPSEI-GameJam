@@ -1,0 +1,88 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Build Upload and Repeat
+on: push
+
+env:
+  GODOT_VERSION: 4.3
+  EXPORT_NAME: Project-Asbestos
+  PROJECT_PATH: .
+  ITCH_USERNAME: gregstr
+  ITCH_GAME_ID: project-asbestos
+
+jobs:
+  export-windows:
+    name: Windows Desktop
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Windows Build
+        run: |
+          mkdir -v -p build/windows
+          cd $PROJECT_PATH
+          godot --headless --verbose --export-debug "Windows Desktop" build/windows/$EXPORT_NAME.exe
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-nightly
+          path: build/windows
+          overwrite: true
+
+  export-linux:
+    name: Linux
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Linux Build
+        run: |
+          mkdir -v -p build/linux
+          cd $PROJECT_PATH
+          godot --headless --verbose --export-debug "Linux" build/linux/$EXPORT_NAME.x86_64
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-nightly
+          path: build/linux
+          overwrite: true
+  
+  deploy:
+    name: Upload to Itch
+    runs-on: ubuntu-20.04
+    needs: [export-windows, export-linux]
+    strategy:
+      fail-fast: true
+      matrix:
+        channel:
+          - windows-nightly
+          - linux-nightly
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.channel }}
+          path: build/${{ matrix.channel }}
+      - uses: KikimoraGames/itch-publish@v0.0.3
+        with:
+          butlerApiKey: ${{secrets.BUTLER_API_KEY}}
+          gameData: ./build/${{ matrix.template }}
+          itchUsername: ${{env.ITCH_USERNAME}}
+          itchGameId: ${{ env.ITCH_GAME_ID }}
+          buildChannel: ${{ matrix.channel }}
+          buildNumber: ${{ needs.version.outputs.version_hash }}
