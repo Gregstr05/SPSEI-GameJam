@@ -10,3 +10,12 @@ script = ExtResource("2_vqlvs")
 game_scene_path = "res://scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("2_b1gp6")
 credits_packed_scene = ExtResource("3_lfrmn")
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "v0.0.1"
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Magičmejkr (prozatimní)"
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
+text = "Jak jsme se sem dostali????"
