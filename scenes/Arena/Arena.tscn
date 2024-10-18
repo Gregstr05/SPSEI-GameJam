@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfh8bi6l7dr0b"]
+
+[ext_resource type="Texture2D" uid="uid://qeaogkn2gh2h" path="res://assets/Backgrounds/TEMP_Background.png" id="1_feeap"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_feeap")
+
+[node name="Camera2D" type="Camera2D" parent="."]
