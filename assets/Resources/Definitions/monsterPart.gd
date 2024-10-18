@@ -9,8 +9,8 @@ class_name monsterPart
 @export var stats : Dictionary = {
 	"damagePrimary": 				0,
 	"damageSecondary":				0,
-	"damageSecondaryRounds":		0,
+	"secondaryCooldown":			0,
 	"HP": 							0,
 	"heal": 						0,
-	"healRounds": 					0,
+	"healCooldown": 				0,
 }

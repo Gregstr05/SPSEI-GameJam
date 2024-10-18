@@ -6,4 +6,11 @@
 script = ExtResource("1_8eu3t")
 partName = "Vampire's head"
 description = "WRYYYYY"
-stats = {}
+stats = {
+"HP": -15,
+"damagePrimary": 5,
+"damageSecondary": 6,
+"heal": 10,
+"healCooldown": 1,
+"secondaryCooldown": 0
+}

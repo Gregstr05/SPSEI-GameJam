@@ -1,7 +1,16 @@
 [gd_resource type="Resource" script_class="monsterPart" load_steps=2 format=3 uid="uid://bicakmq2abppq"]
 
-[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_d57hc"]
+[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_l02ke"]
 
 [resource]
-script = ExtResource("1_d57hc")
+script = ExtResource("1_l02ke")
 partName = ""
+description = ""
+stats = {
+"HP": -20,
+"damagePrimary": 30,
+"damageSecondary": 20,
+"heal": -2,
+"healCooldown": 1,
+"secondaryCooldown": -1
+}

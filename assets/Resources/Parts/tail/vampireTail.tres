@@ -6,4 +6,11 @@
 script = ExtResource("1_ctiws")
 partName = ""
 description = "What the fuck did you expect???"
-stats = {}
+stats = {
+"HP": 0,
+"damagePrimary": 0,
+"damageSecondary": 0,
+"heal": 0,
+"healCooldown": 0,
+"secondaryCooldown": 0
+}
