@@ -29,6 +29,7 @@ pause_menu_packed = ExtResource("5_hmq52")
 [node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("6_qxhne")
 level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
+Default_scene_path = null
 files = Array[String](["res://scenes/game_scene/levels/level_1.tscn", "res://scenes/game_scene/levels/level_2.tscn", "res://scenes/game_scene/levels/level_3.tscn"])
 directory = "res://scenes/game_scene/levels"
 

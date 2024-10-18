@@ -11,15 +11,16 @@ signal levels_finished
 @export var level_container : Node
 ## Loads a level on start.
 @export var auto_load : bool = true
+@export_file("*.tscn") var Default_scene_path : String
 @export_group("Debugging")
 @export var force_level : int = -1
 
 var current_level : Node
 
-func get_current_level_id() -> int:
+func get_default_level() -> int:
 	return GameLevelLog.get_current_level() if force_level == -1 else force_level
 
-func get_level_file(level_id : int = get_current_level_id()):
+func get_level_file(level_id : int = get_default_level()):
 	if files.is_empty():
 		push_error("levels list is empty")
 		return
@@ -28,8 +29,10 @@ func get_level_file(level_id : int = get_current_level_id()):
 		level_id = files.size() - 1
 	return files[level_id]
 
+
+
 func advance_level() -> bool:
-	var level_id : int = get_current_level_id()
+	var level_id : int = get_default_level()
 	level_id += 1
 	if level_id >= files.size():
 		emit_signal("levels_finished")
@@ -44,7 +47,7 @@ func _attach_level(level_resource : Resource):
 	level_container.call_deferred("add_child", instance)
 	return instance
 
-func load_level(level_id : int = get_current_level_id()):
+func load_level(level_id : int = get_default_level()):
 	if is_instance_valid(current_level):
 		current_level.queue_free()
 		await current_level.tree_exited
@@ -56,13 +59,21 @@ func load_level(level_id : int = get_current_level_id()):
 	current_level = _attach_level(SceneLoader.get_resource())
 	emit_signal("level_loaded")
 
-func advance_and_load_level():
-	if advance_level():
-		load_level()
+func load_level_scene(scene_path :String):
+	if is_instance_valid(current_level):
+		current_level.queue_free()
+		await current_level.tree_exited
+		current_level = null
+	SceneLoader.load_scene(scene_path, true)
+	emit_signal("level_load_started")
+	await(SceneLoader.scene_loaded)
+	current_level = _attach_level(SceneLoader.get_resource())
+	emit_signal("level_loaded")
 
 func _ready():
 	if Engine.is_editor_hint():
 		# Text files get a `.remap` extension added on export.
 		_refresh_files()
 	if auto_load:
-		load_level()
+		load_level_scene(Default_scene_path)
+		#load_level()
