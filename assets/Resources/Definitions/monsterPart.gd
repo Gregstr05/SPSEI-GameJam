@@ -2,6 +2,15 @@ extends Resource
 
 class_name monsterPart
 
+enum types {
+	Head,
+	Arms,
+	Body,
+	Legs,
+	Tail
+}
+
+@export var type : types 
 @export var partName : String = ""
 @export var description : String = ""
 @export var texture : Texture2D

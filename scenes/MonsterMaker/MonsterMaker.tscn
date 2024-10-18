@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4b266u74l14k"]
+[gd_scene load_steps=5 format=3 uid="uid://d4b266u74l14k"]
 
 [ext_resource type="Script" path="res://scenes/MonsterMaker/monster_maker.gd" id="1_et155"]
 [ext_resource type="PackedScene" uid="uid://o18sptmg0i6t" path="res://scenes/MonsterMaker/monsterPart/monsterPart.tscn" id="2_10b2e"]
+[ext_resource type="Resource" uid="uid://bw1upsi8vioe2" path="res://assets/Resources/Parts/monsterDef.tres" id="3_u8cjc"]
 [ext_resource type="Texture2D" uid="uid://bfcoxfc06x8i2" path="res://assets/Backgrounds/penta.png" id="3_yjhpo"]
 
 [node name="MonsterMaker" type="Node2D"]
 script = ExtResource("1_et155")
+ItemScene = ExtResource("2_10b2e")
+MonsterDefinitions = ExtResource("3_u8cjc")
 
 [node name="Background" type="Sprite2D" parent="."]
 
@@ -57,41 +60,54 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/h_separation = 110
-theme_override_constants/v_separation = 110
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 columns = 7
 
 [node name="MonsterPart" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
+receptacle = true
 
 [node name="MonsterPart2" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
+receptacle = true
 
 [node name="MonsterPart3" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart4" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart5" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart6" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart7" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart8" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart9" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart10" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="MonsterPart11" parent="CanvasLayer/HBoxContainer/VBoxContainer/Inventory/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("2_10b2e")]
+visible = false
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HBoxContainer/VBoxContainer"]
@@ -140,9 +156,11 @@ fit_content = true
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer/PanelContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -150,45 +168,64 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 texture = ExtResource("3_yjhpo")
 expand_mode = 5
 
-[node name="Part" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Part_name:"
+[node name="MonsterPart" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect" groups=["Receptacle"] instance=ExtResource("2_10b2e")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156
+anchor_top = 0.25
+anchor_right = 0.254
+anchor_bottom = 0.424
+offset_left = -0.0200043
+offset_top = 0.046875
+offset_right = -0.0300293
+offset_bottom = 0.16748
+receptacle = true
 
-[node name="PartDescription" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-text = "Wendigo head
-Health: +20
-Primary Damage: +2
-Secondary Damage: +10
-Secondary Cooldown: +1
-Heal: -2"
-fit_content = true
+[node name="MonsterPart2" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect" groups=["Receptacle"] instance=ExtResource("2_10b2e")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.244
+anchor_top = 0.725
+anchor_right = 0.342
+anchor_bottom = 0.899
+offset_left = 0.019989
+offset_top = -0.164063
+offset_right = 0.00997925
+offset_bottom = -0.043457
+receptacle = true
 
-[node name="Monster" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Monster Stats:"
+[node name="MonsterPart3" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect" groups=["Receptacle"] instance=ExtResource("2_10b2e")]
+layout_mode = 0
+offset_left = 698.0
+offset_top = 442.0
+offset_right = 800.4
+offset_bottom = 544.4
+receptacle = true
 
-[node name="MonsterDescription" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-text = "Health: 120
-Primary Damage: 12
-Secondary Damage: 30
-Secondary Cooldown: 3
-Heal: 8"
-fit_content = true
+[node name="MonsterPart4" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect" groups=["Receptacle"] instance=ExtResource("2_10b2e")]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 144.0
+offset_right = 902.4
+offset_bottom = 246.4
+receptacle = true
+
+[node name="MonsterPart5" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect" groups=["Receptacle"] instance=ExtResource("2_10b2e")]
+layout_mode = 0
+offset_left = 488.0
+offset_top = -1.0
+offset_right = 590.4
+offset_bottom = 101.4
+receptacle = true
 
 [node name="Button" type="Button" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

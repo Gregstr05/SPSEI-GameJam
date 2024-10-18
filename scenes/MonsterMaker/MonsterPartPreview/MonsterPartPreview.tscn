@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://woajsu1pumwp"]
+
+[ext_resource type="Script" path="res://scenes/MonsterMaker/MonsterPartPreview/monster_part_preview.gd" id="1_h80e1"]
+[ext_resource type="Texture2D" uid="uid://bhkh7xe2t8pbh" path="res://assets/images/Parts/Blank/blank_slot.png" id="2_gf74l"]
+
+[node name="MonsterPartRecepticle" type="Control"]
+custom_minimum_size = Vector2(102.4, 102.4)
+layout_mode = 3
+anchor_right = 0.053
+anchor_bottom = 0.095
+offset_right = 0.639992
+offset_bottom = -0.200005
+script = ExtResource("1_h80e1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 409.6
+offset_bottom = 409.6
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_gf74l")
+stretch_mode = 2

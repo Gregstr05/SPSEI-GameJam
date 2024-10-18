@@ -36,6 +36,10 @@ project/assembly_name="Game Template"
 
 enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
 
+[global_group]
+
+Receptacle="Monster part receptacle"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

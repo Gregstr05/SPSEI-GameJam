@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_kec0h")
+type = 4
 partName = ""
 description = ""
 texture = ExtResource("3_gi4sm")

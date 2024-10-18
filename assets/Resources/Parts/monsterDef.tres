@@ -1,12 +1,17 @@
-[gd_resource type="Resource" script_class="monsterWhole" load_steps=3 format=3 uid="uid://bw1upsi8vioe2"]
+[gd_resource type="Resource" script_class="monsterWhole" load_steps=8 format=3 uid="uid://bw1upsi8vioe2"]
 
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_qioej"]
+[ext_resource type="Resource" uid="uid://d0dd2v2sgouv6" path="res://assets/Resources/Parts/arms/wendigoArms.tres" id="2_8frb4"]
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterWhole.gd" id="2_biril"]
+[ext_resource type="Resource" uid="uid://bgb3nmos0xkqd" path="res://assets/Resources/Parts/body/wendigoBody.tres" id="3_j7got"]
+[ext_resource type="Resource" uid="uid://bicakmq2abppq" path="res://assets/Resources/Parts/head/wendigoHead.tres" id="4_5kywy"]
+[ext_resource type="Resource" uid="uid://dtw2cdlfg7wx5" path="res://assets/Resources/Parts/legs/wendigoLegs.tres" id="5_waq6i"]
+[ext_resource type="Resource" uid="uid://dylar38s3bckd" path="res://assets/Resources/Parts/tail/wendigoTail.tres" id="7_5dda4"]
 
 [resource]
 script = ExtResource("2_biril")
-head = Array[ExtResource("1_qioej")]([null])
-body = Array[ExtResource("1_qioej")]([])
-arms = Array[ExtResource("1_qioej")]([])
-legs = Array[ExtResource("1_qioej")]([])
-tail = Array[ExtResource("1_qioej")]([])
+head = Array[ExtResource("1_qioej")]([ExtResource("4_5kywy")])
+body = Array[ExtResource("1_qioej")]([ExtResource("3_j7got")])
+arms = Array[ExtResource("1_qioej")]([ExtResource("2_8frb4")])
+legs = Array[ExtResource("1_qioej")]([ExtResource("5_waq6i")])
+tail = Array[ExtResource("1_qioej")]([ExtResource("7_5dda4")])
