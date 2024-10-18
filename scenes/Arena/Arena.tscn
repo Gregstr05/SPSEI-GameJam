@@ -1,17 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfh8bi6l7dr0b"]
+[gd_scene load_steps=13 format=3 uid="uid://bfh8bi6l7dr0b"]
 
-[ext_resource type="Texture2D" uid="uid://qeaogkn2gh2h" path="res://assets/Backgrounds/TEMP_Background.png" id="1_feeap"]
 [ext_resource type="Script" path="res://scenes/Arena/arena.gd" id="1_ts25u"]
+[ext_resource type="Texture2D" uid="uid://djrd22egcg6vn" path="res://assets/Backgrounds/arena.png" id="2_cnpap"]
 [ext_resource type="PackedScene" uid="uid://cgqpa8w5sj8b2" path="res://scenes/Arena/MonsterInfo/MonsterInfo.tscn" id="2_v5bye"]
 [ext_resource type="Theme" uid="uid://bse741lql8acf" path="res://Attack_info_text_theme.tres" id="3_o8oii"]
 [ext_resource type="Theme" uid="uid://63cyr4a0rgv6" path="res://Attack_Button_theme.tres" id="4_7p7ih"]
 [ext_resource type="Script" path="res://scenes/Arena/MonsterSpawn.gd" id="6_sciaq"]
+[ext_resource type="PackedScene" uid="uid://bvyqyemgmr2dm" path="res://scenes/MonsterScene/MonsterScene.tscn" id="7_bdx0u"]
+[ext_resource type="Resource" uid="uid://bicakmq2abppq" path="res://assets/Resources/Parts/head/wendigoHead.tres" id="8_0p517"]
+[ext_resource type="Resource" uid="uid://d0dd2v2sgouv6" path="res://assets/Resources/Parts/arms/wendigoArms.tres" id="9_8d0f7"]
+[ext_resource type="Resource" uid="uid://bgb3nmos0xkqd" path="res://assets/Resources/Parts/body/wendigoBody.tres" id="10_h3cxt"]
+[ext_resource type="Resource" uid="uid://dtw2cdlfg7wx5" path="res://assets/Resources/Parts/legs/wendigoLegs.tres" id="11_bfvsg"]
+[ext_resource type="Resource" uid="uid://dylar38s3bckd" path="res://assets/Resources/Parts/tail/wendigoTail.tres" id="12_tqd62"]
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_ts25u")
 
 [node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("1_feeap")
+texture = ExtResource("2_cnpap")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -99,7 +105,17 @@ text = "Heal"
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(-350, 0)
 script = ExtResource("6_sciaq")
+player = true
+MonsterScene = ExtResource("7_bdx0u")
 
 [node name="EnemySpawn" type="Node2D" parent="."]
 position = Vector2(350, 0)
 script = ExtResource("6_sciaq")
+MonsterScene = ExtResource("7_bdx0u")
+DefaultEnemy = {
+"Arms": ExtResource("9_8d0f7"),
+"Body": ExtResource("10_h3cxt"),
+"Head": ExtResource("8_0p517"),
+"Legs": ExtResource("11_bfvsg"),
+"Tail": ExtResource("12_tqd62")
+}

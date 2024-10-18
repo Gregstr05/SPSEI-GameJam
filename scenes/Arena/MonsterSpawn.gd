@@ -1,7 +1,11 @@
 extends Node2D
 
+@export var player :bool
+
 var Monster :Dictionary
-var MonsterScene :String = "res://scenes/MonsterScene/MonsterScene.tscn"
+@export var MonsterScene :PackedScene
+
+@export var DefaultEnemy :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tail": 0}
 
 signal died
 signal PrimaryAttack(damage :int)
@@ -11,18 +15,28 @@ signal HealthChanged(health :int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var MonsterInstance = load(MonsterScene)
-	MonsterInstance.Monster["Head"] = Monster["Head"].texture
-	MonsterInstance.Monster["Arms"] = Monster["Arms"].texture
-	MonsterInstance.Monster["Body"] = Monster["Body"].texture
-	MonsterInstance.Monster["Legs"] = Monster["Legs"].texture
-	MonsterInstance.Monster["Tail"] = Monster["Tail"].texture
+	var MonsterInstance = MonsterScene.instantiate()
+	if player:
+		MonsterInstance.Monster["Head"] = MonsterGlobal.PlayerMonster["Head"]
+		MonsterInstance.Monster["Arms"] = MonsterGlobal.PlayerMonster["Arms"]
+		MonsterInstance.Monster["Body"] = MonsterGlobal.PlayerMonster["Body"]
+		MonsterInstance.Monster["Legs"] = MonsterGlobal.PlayerMonster["Legs"]
+		MonsterInstance.Monster["Tail"] = MonsterGlobal.PlayerMonster["Tail"]
+	else:
+		MonsterInstance.Monster = _get_enemy_monster()
+		MonsterInstance._make_enemy()
 	add_child(MonsterInstance)
 	MonsterInstance.died.connect(_died)
 	MonsterInstance.PrimaryAttack.connect(_primaryAttack)
 	MonsterInstance.SecondaryAttack.connect(_secondaryAttack)
 	MonsterInstance.Heal.connect(_heal)
 	pass # Replace with function body.
+
+func _get_enemy_monster():
+	var Monster :Dictionary
+
+	Monster = DefaultEnemy
+	return DefaultEnemy
 
 func _died():
 	died.emit()

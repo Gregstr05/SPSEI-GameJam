@@ -8,6 +8,8 @@ var monsterPartStats : Dictionary
 @export var BlankSlotTexture : Texture2D
 @export var PartPreviewScene : PackedScene
 
+signal dropped
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if monsterPartInstance == null:
@@ -15,6 +17,8 @@ func _ready() -> void:
 	else:
 		$TextureRect.texture = monsterPartInstance.icon
 	
+	if receptacle:
+		dropped.emit()
 	pass # Replace with function body.
 
 func _get_drag_data(_pos):

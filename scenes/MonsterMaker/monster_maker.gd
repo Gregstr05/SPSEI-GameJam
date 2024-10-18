@@ -27,3 +27,26 @@ func _add_parts(part :Array[monsterPart]):
 		ItemSlot.monsterPartInstance = i
 		ItemSlot.custom_minimum_size = Vector2(102.4, 102.4)
 		%GridContainer.add_child(ItemSlot)
+
+func _parts_updated():
+	var check = 0
+	var receptacles = get_tree().get_nodes_in_group("Receptacle")
+	for receptacle in receptacles:
+		if typeof(receptacle.monsterPartInstance) == TYPE_NIL:
+			check -= 1
+	print(check)
+	if check < 0:
+		%Reanimate.disabled = true
+	else:
+		%Reanimate.disabled = false
+	pass
+
+
+func _on_reanimate_pressed() -> void:
+	var receptacles = get_tree().get_nodes_in_group("Receptacle")
+	for receptacle in receptacles:
+		MonsterGlobal.MonsterAsortedParts.append(receptacle.monsterPartInstance)
+	
+	MonsterGlobal._asign_parts()
+	get_tree().get_first_node_in_group("LevelLoader").load_level_scene("res://scenes/Arena/Arena.tscn")
+	pass # Replace with function body.

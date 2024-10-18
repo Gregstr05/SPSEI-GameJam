@@ -1,16 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvyqyemgmr2dm"]
+[gd_scene load_steps=7 format=3 uid="uid://bvyqyemgmr2dm"]
 
 [ext_resource type="Script" path="res://scenes/MonsterScene/monster_scene.gd" id="1_gqh3v"]
+[ext_resource type="Texture2D" uid="uid://rad5cukmv32q" path="res://assets/images/Parts/body/wendigo-body.png" id="2_3r0pa"]
+[ext_resource type="Texture2D" uid="uid://di3wgcqdqau1h" path="res://assets/images/Parts/tail/wendigo-tail.png" id="3_pqmj2"]
+[ext_resource type="Texture2D" uid="uid://3ppe4jm1shc3" path="res://assets/images/Parts/legs/wendigo-leg.png" id="4_lq5jt"]
+[ext_resource type="Texture2D" uid="uid://dscb7r0i5nhol" path="res://assets/images/Parts/amrs/wendigo-arm.png" id="5_gx585"]
+[ext_resource type="Texture2D" uid="uid://b1wbtayc7iour" path="res://assets/images/Parts/head/wendigo-head.png" id="6_eoem4"]
 
 [node name="MonsterScene" type="Node2D"]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_gqh3v")
 
-[node name="Head" type="Sprite2D" parent="."]
-
-[node name="Arms" type="Sprite2D" parent="."]
-
 [node name="Body" type="Sprite2D" parent="."]
-
-[node name="Legs" type="Sprite2D" parent="."]
+texture = ExtResource("2_3r0pa")
 
 [node name="Tail" type="Sprite2D" parent="."]
+texture = ExtResource("3_pqmj2")
+
+[node name="Legs" type="Sprite2D" parent="."]
+texture = ExtResource("4_lq5jt")
+
+[node name="Arms" type="Sprite2D" parent="."]
+texture = ExtResource("5_gx585")
+
+[node name="Head" type="Sprite2D" parent="."]
+texture = ExtResource("6_eoem4")

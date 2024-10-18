@@ -26,7 +26,7 @@ lose_scene = ExtResource("3_cwxig")
 script = ExtResource("4_6b6cy")
 pause_menu_packed = ExtResource("5_lfufl")
 
-[node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
+[node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container") groups=["LevelLoader"]]
 script = ExtResource("6_b43ns")
 level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
 Default_scene_path = "res://scenes/Arena/Arena.tscn"
