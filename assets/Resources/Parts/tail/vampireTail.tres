@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_ctiws")
 partName = ""
+description = "What the fuck did you expect???"
 stats = {}

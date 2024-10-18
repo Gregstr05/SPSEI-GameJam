@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_8eu3t")
-partName = ""
+partName = "Vampire's head"
+description = "WRYYYYY"
 stats = {}
