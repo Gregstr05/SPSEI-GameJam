@@ -74,6 +74,7 @@ func _ready():
 	_setup_options()
 	_setup_credits()
 	_setup_play()
+	%PlayButton.grab_focus()
 
 func _on_play_button_pressed():
 	play_game()
