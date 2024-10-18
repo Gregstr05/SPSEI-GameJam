@@ -5,4 +5,12 @@
 [resource]
 script = ExtResource("1_kpxyv")
 partName = ""
-stats = {}
+description = ""
+stats = {
+"HP": 5,
+"damagePrimary": 5,
+"damageSecondary": 12,
+"heal": -3,
+"healCooldown": 1,
+"secondaryCooldown": 1
+}

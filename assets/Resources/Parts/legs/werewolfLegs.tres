@@ -5,4 +5,12 @@
 [resource]
 script = ExtResource("1_x0y7e")
 partName = ""
-stats = {}
+description = ""
+stats = {
+"HP": -2,
+"damagePrimary": 3,
+"damageSecondary": 1,
+"heal": -1,
+"healCooldown": 0,
+"secondaryCooldown": 0
+}
