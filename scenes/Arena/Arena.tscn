@@ -102,6 +102,13 @@ layout_mode = 2
 theme = ExtResource("4_7p7ih")
 text = "Heal"
 
+[node name="Label" type="Label" parent="HUD/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("3_o8oii")
+text = "Round: %d"
+
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(-350, 0)
 script = ExtResource("6_sciaq")
@@ -119,3 +126,9 @@ DefaultEnemy = {
 "Legs": ExtResource("11_bfvsg"),
 "Tail": ExtResource("12_tqd62")
 }
+
+[connection signal="pressed" from="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Primary" to="." method="_on_primary_pressed"]
+[connection signal="pressed" from="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Secondary" to="." method="_on_secondary_pressed"]
+[connection signal="pressed" from="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Heal" to="." method="_on_heal_pressed"]
+[connection signal="died" from="PlayerSpawn" to="." method="_on_player_spawn_died"]
+[connection signal="died" from="EnemySpawn" to="." method="_on_enemy_spawn_died"]
