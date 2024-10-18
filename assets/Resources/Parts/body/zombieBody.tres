@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=2 format=3 uid="uid://dub3eeimhhbln"]
-
-[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_j178r"]
-
-[resource]
-script = ExtResource("1_j178r")
-partName = ""
-stats = {}

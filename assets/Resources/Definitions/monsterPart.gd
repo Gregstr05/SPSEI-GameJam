@@ -5,4 +5,4 @@ class_name monsterPart
 @export var partName : String
 @export var texture : ImageTexture
 @export var icon : ImageTexture
-@export var stats : Dictionary
+@export var stats : Dictionary = {"damage": 0, "HP": 0}

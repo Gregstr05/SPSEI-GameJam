@@ -5,4 +5,7 @@
 [resource]
 script = ExtResource("1_rq5qi")
 partName = ""
-stats = {}
+stats = {
+"HP": 0,
+"damage": 0
+}

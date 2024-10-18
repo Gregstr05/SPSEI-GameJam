@@ -1,11 +1,11 @@
 extends Control
 
-var monsterPart : monsterPart
+var monsterPartInstance : monsterPart
 var monsterPartStats : Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$TextureRect.texture = monsterPart.icon
+	$TextureRect.texture = monsterPartInstance.texture
 	
 	pass # Replace with function body.
 
