@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfh8bi6l7dr0b"]
+[gd_scene load_steps=7 format=3 uid="uid://bfh8bi6l7dr0b"]
 
 [ext_resource type="Texture2D" uid="uid://qeaogkn2gh2h" path="res://assets/Backgrounds/TEMP_Background.png" id="1_feeap"]
+[ext_resource type="Script" path="res://scenes/Arena/arena.gd" id="1_ts25u"]
 [ext_resource type="PackedScene" uid="uid://cgqpa8w5sj8b2" path="res://scenes/Arena/MonsterInfo/MonsterInfo.tscn" id="2_v5bye"]
 [ext_resource type="Theme" uid="uid://bse741lql8acf" path="res://Attack_info_text_theme.tres" id="3_o8oii"]
 [ext_resource type="Theme" uid="uid://63cyr4a0rgv6" path="res://Attack_Button_theme.tres" id="4_7p7ih"]
+[ext_resource type="Script" path="res://scenes/Arena/MonsterSpawn.gd" id="6_sciaq"]
 
 [node name="Arena" type="Node2D"]
+script = ExtResource("1_ts25u")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_feeap")
@@ -92,3 +95,11 @@ text = "Secondary Attack"
 layout_mode = 2
 theme = ExtResource("4_7p7ih")
 text = "Heal"
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(-350, 0)
+script = ExtResource("6_sciaq")
+
+[node name="EnemySpawn" type="Node2D" parent="."]
+position = Vector2(350, 0)
+script = ExtResource("6_sciaq")
