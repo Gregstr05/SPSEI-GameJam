@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4b266u74l14k"]
+[gd_scene load_steps=2 format=3 uid="uid://d4b266u74l14k"]
 
-[ext_resource type="Script" path="res://scenes/MonsterMaker/monster_maker.gd" id="1_kksr7"]
-[ext_resource type="PackedScene" uid="uid://o18sptmg0i6t" path="res://scenes/MonsterMaker/monsterPart/monsterPart.tscn" id="2_10b2e"]
+[ext_resource type="Script" path="res://scenes/MonsterMaker/monster_maker.gd" id="1_et155"]
 
 [node name="MonsterMaker" type="Node2D"]
-script = ExtResource("1_kksr7")
-ItemScene = ExtResource("2_10b2e")
+script = ExtResource("1_et155")
 
 [node name="Background" type="Sprite2D" parent="."]
 
