@@ -5,7 +5,7 @@ var monsterPartStats : Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$TextureRect.texture = monsterPartInstance.texture
+	$TextureRect.texture = monsterPartInstance.icon
 	
 	pass # Replace with function body.
 
