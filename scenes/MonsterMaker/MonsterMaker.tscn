@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://d4b266u74l14k"]
 
 [node name="MonsterMaker" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2

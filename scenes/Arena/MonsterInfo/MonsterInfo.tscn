@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgqpa8w5sj8b2"]
+
+[ext_resource type="Script" path="res://scenes/Arena/MonsterInfo/monster_info.gd" id="1_21dql"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_50q04"]
+
+[node name="MonsterInfo" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -672.96
+offset_top = -461.7
+offset_right = 672.96
+offset_bottom = 461.7
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21dql")
+
+[node name="Player_info" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.85
+anchor_right = 0.3
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player_info"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Player_info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 31
+text = "Player"
+
+[node name="Health" type="Label" parent="Player_info/VBoxContainer"]
+layout_mode = 2
+text = "Health:"
+
+[node name="HealthBar" type="ProgressBar" parent="Player_info/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(0.989844, 5.48691e-06, 9.62615e-07, 1)
+material = SubResource("CanvasItemMaterial_50q04")
+layout_mode = 2
+size_flags_vertical = 3
+step = 1.0
+value = 54.0
+show_percentage = false

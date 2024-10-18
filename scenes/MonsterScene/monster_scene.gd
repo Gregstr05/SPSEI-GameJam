@@ -5,6 +5,9 @@ var Monster :Dictionary
 var HP :int
 
 signal died
+signal PrimaryAttack(damage :int)
+signal SecondaryAttack(damage :int)
+signal Heal(amount :int)
 
 
 # Called when the node enters the scene tree for the first time.
