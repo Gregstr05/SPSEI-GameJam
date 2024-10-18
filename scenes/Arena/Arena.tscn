@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfh8bi6l7dr0b"]
+[gd_scene load_steps=5 format=3 uid="uid://bfh8bi6l7dr0b"]
 
 [ext_resource type="Texture2D" uid="uid://qeaogkn2gh2h" path="res://assets/Backgrounds/TEMP_Background.png" id="1_feeap"]
+[ext_resource type="PackedScene" uid="uid://cgqpa8w5sj8b2" path="res://scenes/Arena/MonsterInfo/MonsterInfo.tscn" id="2_v5bye"]
+[ext_resource type="Theme" uid="uid://bse741lql8acf" path="res://Attack_info_text_theme.tres" id="3_o8oii"]
+[ext_resource type="Theme" uid="uid://63cyr4a0rgv6" path="res://Attack_Button_theme.tres" id="4_7p7ih"]
 
 [node name="Arena" type="Node2D"]
 
@@ -8,3 +11,84 @@
 texture = ExtResource("1_feeap")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemy" parent="HUD/Control" instance=ExtResource("2_v5bye")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -414.0
+offset_top = -774.0
+offset_right = 931.92
+offset_bottom = 149.4
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="Player" parent="HUD/Control" instance=ExtResource("2_v5bye")]
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -931.4
+offset_right = 1353.92
+offset_bottom = -8.0
+grow_horizontal = 1
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 865.0
+offset_right = 1907.0
+offset_bottom = 1069.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Control/PanelContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/Control/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_o8oii")
+text = "Primary attack
+Damage: 20"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Control/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Primary" type="Button" parent="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_7p7ih")
+text = "Primary"
+
+[node name="Secondary" type="Button" parent="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_7p7ih")
+text = "Secondary"
+
+[node name="Heal" type="Button" parent="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_7p7ih")
+text = "Heal"
