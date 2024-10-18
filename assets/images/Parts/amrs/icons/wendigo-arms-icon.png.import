@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ppe4jm1shc3"
-path="res://.godot/imported/wendigo-leg.png-a7d7b9c1e2c6b31e4b69cacb1bb7ed2a.ctex"
+uid="uid://dsuscukpdvuxg"
+path="res://.godot/imported/wendigo-arms-icon.png-c246820f3a0f2d1b0f3cade766cf1e05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kritaExports/wendigo-leg.png"
-dest_files=["res://.godot/imported/wendigo-leg.png-a7d7b9c1e2c6b31e4b69cacb1bb7ed2a.ctex"]
+source_file="res://assets/images/Parts/amrs/icons/wendigo-arms-icon.png"
+dest_files=["res://.godot/imported/wendigo-arms-icon.png-c246820f3a0f2d1b0f3cade766cf1e05.ctex"]
 
 [params]
 

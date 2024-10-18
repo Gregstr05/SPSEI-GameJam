@@ -1,11 +1,15 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=2 format=3 uid="uid://bicakmq2abppq"]
+[gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://bicakmq2abppq"]
 
+[ext_resource type="Texture2D" uid="uid://cdhuxjdhrp582" path="res://assets/images/Parts/head/icons/wendigo-head-icon.png" id="1_fte6h"]
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_l02ke"]
+[ext_resource type="Texture2D" uid="uid://b1wbtayc7iour" path="res://assets/images/Parts/head/wendigo-head.png" id="3_wj0ur"]
 
 [resource]
 script = ExtResource("1_l02ke")
 partName = ""
 description = ""
+texture = ExtResource("3_wj0ur")
+icon = ExtResource("1_fte6h")
 stats = {
 "HP": -20,
 "damagePrimary": 30,

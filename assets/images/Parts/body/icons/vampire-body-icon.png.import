@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dscb7r0i5nhol"
-path="res://.godot/imported/wendigo-arm.png-74980ea808b1a5244ea62ccb7cecb8c4.ctex"
+uid="uid://df7r3fr4g0lfi"
+path="res://.godot/imported/vampire-body-icon.png-d934670b31229bd4b62a2bd9f18c9012.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kritaExports/wendigo-arm.png"
-dest_files=["res://.godot/imported/wendigo-arm.png-74980ea808b1a5244ea62ccb7cecb8c4.ctex"]
+source_file="res://assets/images/Parts/body/icons/vampire-body-icon.png"
+dest_files=["res://.godot/imported/vampire-body-icon.png-d934670b31229bd4b62a2bd9f18c9012.ctex"]
 
 [params]
 

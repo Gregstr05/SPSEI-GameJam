@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di3wgcqdqau1h"
-path="res://.godot/imported/wendigo-tail.png-4940420c59a1dd8b918ec009f4a1505f.ctex"
+uid="uid://3ppe4jm1shc3"
+path="res://.godot/imported/wendigo-leg.png-68d42ca13ebceb7ec4bc7356f6812bea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kritaExports/wendigo-tail.png"
-dest_files=["res://.godot/imported/wendigo-tail.png-4940420c59a1dd8b918ec009f4a1505f.ctex"]
+source_file="res://assets/images/Parts/legs/wendigo-leg.png"
+dest_files=["res://.godot/imported/wendigo-leg.png-68d42ca13ebceb7ec4bc7356f6812bea.ctex"]
 
 [params]
 
