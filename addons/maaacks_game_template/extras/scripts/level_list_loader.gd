@@ -75,5 +75,6 @@ func _ready():
 		# Text files get a `.remap` extension added on export.
 		_refresh_files()
 	if auto_load:
-		load_level_scene(Default_scene_path)
+		load_level_scene("res://scenes/MonsterMaker/MonsterMaker.tscn")
+		#load_level_scene(Default_scene_path)
 		#load_level()
