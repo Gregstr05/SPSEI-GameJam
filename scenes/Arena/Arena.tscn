@@ -81,12 +81,12 @@ size_flags_vertical = 6
 [node name="Primary" type="Button" parent="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_7p7ih")
-text = "Primary"
+text = "Primary Attack"
 
 [node name="Secondary" type="Button" parent="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_7p7ih")
-text = "Secondary"
+text = "Secondary Attack"
 
 [node name="Heal" type="Button" parent="HUD/Control/PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
