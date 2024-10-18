@@ -7,6 +7,7 @@ signal died
 signal PrimaryAttack(damage :int)
 signal SecondaryAttack(damage :int)
 signal Heal(amount :int)
+signal HealthChanged(health :int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
