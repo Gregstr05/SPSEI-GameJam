@@ -110,3 +110,12 @@ func _heal(amount :int):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_heal(amount: int) -> void:
+	get_child(0).HP += amount
+	print(get_child(0).HP)
+	HealthChanged.emit(get_child(0).HP)
+	if get_child(0).HP <= 0:
+		_died()
+	pass # Replace with function body.
