@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_rq5qi")
-partName = ""
-description = ""
+type = 1
+partName = "Dragon's wing"
+description = "Torn wing from the fallen dragon."
 stats = {
 "HP": 10,
 "damagePrimary": 6,

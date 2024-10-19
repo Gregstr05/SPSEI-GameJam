@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj0fcdi1jttks"
-path="res://.godot/imported/wendigo-body-icon.png-875dfc74f42251a5a4965252843a2b79.ctex"
+uid="uid://d0wyht41xp5j1"
+path="res://.godot/imported/wendigo-body-icon.PNG-4c60d38afc5fd32a4c5ceaa31b7853fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Parts/body/icons/wendigo-body-icon.png"
-dest_files=["res://.godot/imported/wendigo-body-icon.png-875dfc74f42251a5a4965252843a2b79.ctex"]
+source_file="res://assets/images/Parts/body/icons/wendigo-body-icon.PNG"
+dest_files=["res://.godot/imported/wendigo-body-icon.PNG-4c60d38afc5fd32a4c5ceaa31b7853fe.ctex"]
 
 [params]
 
