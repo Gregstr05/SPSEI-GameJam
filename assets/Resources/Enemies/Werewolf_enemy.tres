@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="monsterEnemy" load_steps=2 format=3 uid="uid://c6eed7jgf7piu"]
+
+[ext_resource type="Script" path="res://assets/resources/Definitions/monsterEnemy.gd" id="1_mu2se"]
+
+[resource]
+script = ExtResource("1_mu2se")
+Name = ""
