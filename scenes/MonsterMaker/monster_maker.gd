@@ -13,6 +13,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func _recieve_part_data(data :monsterPart):
+	print(data.stats)
+	_show_data(data)
+	pass
+
+func _show_data(data :monsterPart):
+	%PartDescription
 
 func _populate_grid():
 	_add_parts(MonsterDefinitions.head)
@@ -26,6 +33,7 @@ func _add_parts(part :Array[monsterPart]):
 		var ItemSlot = ItemScene.instantiate()
 		ItemSlot.monsterPartInstance = i
 		ItemSlot.custom_minimum_size = Vector2(102.4, 102.4)
+		ItemSlot.sendData.connect(_recieve_part_data)
 		%GridContainer.add_child(ItemSlot)
 
 func _parts_updated():
