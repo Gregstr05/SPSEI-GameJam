@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=3 format=3 uid="uid://utsbew8lwqyb"]
+[gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://utsbew8lwqyb"]
 
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_430ce"]
-[ext_resource type="Texture2D" uid="uid://c04irx2hjhl5s" path="res://assets/images/parts/amrs/werewolf-arm.png" id="2_thp3e"]
+[ext_resource type="Texture2D" uid="uid://u633et23oqt7" path="res://assets/images/Parts/amrs/icons/werewolf-arms-icon.png" id="1_g81ov"]
+[ext_resource type="Texture2D" uid="uid://c04irx2hjhl5s" path="res://assets/images/Parts/amrs/werewolf-arm.png" id="2_thp3e"]
 
 [resource]
 script = ExtResource("1_430ce")
 type = 1
-partName = ""
+partName = "Werewolf's arm"
 description = ""
 texture = ExtResource("2_thp3e")
+icon = ExtResource("1_g81ov")
 stats = {
 "HP": -5,
 "damagePrimary": 10,

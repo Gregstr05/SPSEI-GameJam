@@ -1,17 +1,31 @@
-[gd_resource type="Resource" script_class="monsterWhole" load_steps=8 format=3 uid="uid://bw1upsi8vioe2"]
+[gd_resource type="Resource" script_class="monsterWhole" load_steps=22 format=3 uid="uid://bw1upsi8vioe2"]
 
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_qioej"]
 [ext_resource type="Resource" uid="uid://d0dd2v2sgouv6" path="res://assets/Resources/Parts/arms/wendigoArms.tres" id="2_8frb4"]
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterWhole.gd" id="2_biril"]
+[ext_resource type="Resource" uid="uid://dex3fekvn48pd" path="res://assets/Resources/Parts/arms/vampireArms.tres" id="3_hywfc"]
 [ext_resource type="Resource" uid="uid://bgb3nmos0xkqd" path="res://assets/Resources/Parts/body/wendigoBody.tres" id="3_j7got"]
 [ext_resource type="Resource" uid="uid://bicakmq2abppq" path="res://assets/Resources/Parts/head/wendigoHead.tres" id="4_5kywy"]
+[ext_resource type="Resource" uid="uid://bg4n11udegj8i" path="res://assets/Resources/Parts/arms/dragonArms.tres" id="4_axyct"]
+[ext_resource type="Resource" uid="uid://utsbew8lwqyb" path="res://assets/Resources/Parts/arms/werewolfArms.tres" id="5_uj75u"]
 [ext_resource type="Resource" uid="uid://dtw2cdlfg7wx5" path="res://assets/Resources/Parts/legs/wendigoLegs.tres" id="5_waq6i"]
 [ext_resource type="Resource" uid="uid://dylar38s3bckd" path="res://assets/Resources/Parts/tail/wendigoTail.tres" id="7_5dda4"]
+[ext_resource type="Resource" uid="uid://8fx7o3trhp8r" path="res://assets/Resources/Parts/body/vampireBody.tres" id="7_qfwx6"]
+[ext_resource type="Resource" uid="uid://uayufvtvxnmx" path="res://assets/Resources/Parts/body/dragonBody.tres" id="8_d45as"]
+[ext_resource type="Resource" uid="uid://c0agt1cpq774x" path="res://assets/Resources/Parts/body/werewolfBody.tres" id="9_aql7d"]
+[ext_resource type="Resource" uid="uid://dbwx6wmjxth4w" path="res://assets/Resources/Parts/head/vampireHead.tres" id="11_3wypi"]
+[ext_resource type="Resource" uid="uid://ctwlsv0py0dap" path="res://assets/Resources/Parts/head/dragonHead.tres" id="12_ox3sc"]
+[ext_resource type="Resource" uid="uid://dfmjdp4om3fcf" path="res://assets/Resources/Parts/head/werewolfHead.tres" id="13_6jc1t"]
+[ext_resource type="Resource" uid="uid://0eicg0lgxow6" path="res://assets/Resources/Parts/legs/vampireLegs.tres" id="15_is3m0"]
+[ext_resource type="Resource" uid="uid://vsc5m1s723cq" path="res://assets/Resources/Parts/legs/dragonLegs.tres" id="16_2vn0f"]
+[ext_resource type="Resource" uid="uid://ckrem7kiwu4lo" path="res://assets/Resources/Parts/legs/werewolfLegs.tres" id="17_c7clx"]
+[ext_resource type="Resource" uid="uid://bruug7va5t8rf" path="res://assets/Resources/Parts/tail/dragonTail.tres" id="20_bre7d"]
+[ext_resource type="Resource" uid="uid://dh84et5v08w5n" path="res://assets/Resources/Parts/tail/werewolfTail.tres" id="21_81tjq"]
 
 [resource]
 script = ExtResource("2_biril")
-head = Array[ExtResource("1_qioej")]([ExtResource("4_5kywy")])
-body = Array[ExtResource("1_qioej")]([ExtResource("3_j7got")])
-arms = Array[ExtResource("1_qioej")]([ExtResource("2_8frb4")])
-legs = Array[ExtResource("1_qioej")]([ExtResource("5_waq6i")])
-tail = Array[ExtResource("1_qioej")]([ExtResource("7_5dda4")])
+head = Array[ExtResource("1_qioej")]([ExtResource("4_5kywy"), ExtResource("11_3wypi"), ExtResource("12_ox3sc"), ExtResource("13_6jc1t")])
+body = Array[ExtResource("1_qioej")]([ExtResource("3_j7got"), ExtResource("7_qfwx6"), ExtResource("8_d45as"), ExtResource("9_aql7d")])
+arms = Array[ExtResource("1_qioej")]([ExtResource("2_8frb4"), ExtResource("3_hywfc"), ExtResource("4_axyct"), ExtResource("5_uj75u")])
+legs = Array[ExtResource("1_qioej")]([ExtResource("5_waq6i"), ExtResource("15_is3m0"), ExtResource("16_2vn0f"), ExtResource("17_c7clx")])
+tail = Array[ExtResource("1_qioej")]([ExtResource("7_5dda4"), ExtResource("20_bre7d"), ExtResource("21_81tjq")])
