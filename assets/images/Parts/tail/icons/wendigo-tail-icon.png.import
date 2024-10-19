@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c46xglu8j81pt"
-path="res://.godot/imported/wendigo-tail-icon.PNG-4a5da0e8d5bc47dc5de471e1fa79c214.ctex"
+path="res://.godot/imported/wendigo-tail-icon.PNG-e3df128a3b1c16ec228a73549fee5cab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Parts/tail/icons/wendigo-tail-icon.PNG"
-dest_files=["res://.godot/imported/wendigo-tail-icon.PNG-4a5da0e8d5bc47dc5de471e1fa79c214.ctex"]
+source_file="res://assets/images/parts/tail/icons/wendigo-tail-icon.PNG"
+dest_files=["res://.godot/imported/wendigo-tail-icon.PNG-e3df128a3b1c16ec228a73549fee5cab.ctex"]
 
 [params]
 

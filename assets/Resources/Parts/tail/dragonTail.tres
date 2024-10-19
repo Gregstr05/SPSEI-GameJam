@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=2 format=3 uid="uid://bruug7va5t8rf"]
+[gd_resource type="Resource" script_class="monsterPart" load_steps=3 format=3 uid="uid://bruug7va5t8rf"]
 
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_kpxyv"]
+[ext_resource type="Texture2D" uid="uid://b6wqud8l7co87" path="res://assets/images/parts/tail/dragon-tail.png" id="2_ect4a"]
 
 [resource]
 script = ExtResource("1_kpxyv")
 type = 4
 partName = "Dragon's tail"
 description = "Length and speed of the whip, but you probably won't survive its swing. The blue dragon's tail, maybe it stroked the hair of the queen of dragons."
+texture = ExtResource("2_ect4a")
 stats = {
 "HP": 5,
 "damagePrimary": 5,
