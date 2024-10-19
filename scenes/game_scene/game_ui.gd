@@ -6,7 +6,7 @@ extends Control
 
 func _ready():
 	InGameMenuController.scene_tree = get_tree()
-	EnemyGlobal.Enemy.append_array(Enemies)
+	print(EnemyGlobal.Enemy)
 
 func _on_level_lost():
 	InGameMenuController.open_menu(lose_scene, get_viewport())

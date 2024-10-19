@@ -12,6 +12,7 @@ var is_player_round :bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_set_max_healths()
+	$HUD/Control/Round.text = "Round: %d" % (roundNum + 1)
 	pass # Replace with function body.
 
 
@@ -88,4 +89,5 @@ func _on_player_spawn_died() -> void:
 
 func _on_round_end() -> void:
 	_switch_sides()
+	$HUD/Control/Round.text = "Round: %d" % (roundNum +1)
 	pass # Replace with function body.

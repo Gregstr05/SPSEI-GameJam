@@ -102,7 +102,7 @@ layout_mode = 2
 theme = ExtResource("4_7p7ih")
 text = "Heal"
 
-[node name="Label" type="Label" parent="HUD/Control"]
+[node name="Round" type="Label" parent="HUD/Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0

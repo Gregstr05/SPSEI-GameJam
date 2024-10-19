@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck0oxyk6k6v43"
-path="res://.godot/imported/vampire-head-icon.PNG-310fdf0bf1c2ecc679197164667fe4a0.ctex"
+path="res://.godot/imported/vampire-head-icon.png-97675033feb6a6249ae6451e23052eee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Parts/head/icons/vampire-head-icon.PNG"
-dest_files=["res://.godot/imported/vampire-head-icon.PNG-310fdf0bf1c2ecc679197164667fe4a0.ctex"]
+source_file="res://assets/images/Parts/head/icons/vampire-head-icon.png"
+dest_files=["res://.godot/imported/vampire-head-icon.png-97675033feb6a6249ae6451e23052eee.ctex"]
 
 [params]
 

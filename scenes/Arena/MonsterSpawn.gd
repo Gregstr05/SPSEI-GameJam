@@ -27,8 +27,10 @@ func _ready() -> void:
 		MonsterInstance.Monster["Legs"] = MonsterGlobal.PlayerMonster["Legs"]
 		MonsterInstance.Monster["Tail"] = MonsterGlobal.PlayerMonster["Tail"]
 	else:
+		print(_get_enemy_monster())
 		MonsterInstance.Monster = _get_enemy_monster()
 		MonsterInstance._make_enemy()
+		print("Adding Enemy")
 	add_child(MonsterInstance)
 	MonsterInstance.died.connect(_died)
 	MonsterInstance.PrimaryAttack.connect(_primaryAttack)
@@ -53,10 +55,8 @@ func _enemy_round():
 		AttackPrimary()
 
 func _get_enemy_monster():
-	var Monster :Dictionary
-
-	Monster = DefaultEnemy
-	return DefaultEnemy
+	Monster = EnemyGlobal.ActiveEnemy
+	return Monster
 
 func HealAttack():
 	var heal = 10

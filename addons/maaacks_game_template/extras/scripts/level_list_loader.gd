@@ -41,6 +41,7 @@ func advance_level() -> bool:
 		EnemyGlobal.EnemyIndex = EnemyGlobal.Enemy.size() - 1
 		return false
 	GameLevelLog.level_reached(EnemyGlobal.EnemyIndex)
+	EnemyGlobal._asign_parts()
 	return true
 
 func _attach_level(level_resource : Resource):
@@ -78,5 +79,7 @@ func _ready():
 		_refresh_files()
 	if auto_load:
 		load_level_scene("res://scenes/MonsterMaker/MonsterMaker.tscn")
+		EnemyGlobal.Enemy.append_array($"..".Enemies)
+		EnemyGlobal._asign_parts()
 		#load_level_scene(Default_scene_path)
 		#load_level()

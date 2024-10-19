@@ -9,6 +9,7 @@
 
 [resource]
 script = ExtResource("1_bbwt5")
+Name = "Wendigo"
 head = ExtResource("3_lngjs")
 arms = ExtResource("1_gadx8")
 body = ExtResource("2_q4243")
