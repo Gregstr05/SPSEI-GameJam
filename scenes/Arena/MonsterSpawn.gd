@@ -63,6 +63,8 @@ func HealAttack():
 	var heal = 10
 	for part in get_child(0).Monster:
 		heal += get_child(0).Monster[part].stats["heal"]
+	if heal < 0:
+		heal = 10
 	Heal.emit(heal)
 	HealthChanged.emit(get_child(0).HP)
 	RoundEnd.emit()
