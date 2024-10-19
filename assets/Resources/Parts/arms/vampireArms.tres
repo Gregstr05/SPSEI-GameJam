@@ -1,13 +1,14 @@
 [gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://dex3fekvn48pd"]
 
-[ext_resource type="Texture2D" uid="uid://bfitd1vbpcsu6" path="res://assets/images/Parts/amrs/icons/vampire-arms-icon.png" id="1_1stfd"]
+[ext_resource type="Texture2D" uid="uid://bnp5r6hm5dgwl" path="res://assets/images/Parts/amrs/icons/vampire-arms-icon.png" id="1_1stfd"]
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_gwe2u"]
 [ext_resource type="Texture2D" uid="uid://bbglaxw1leojh" path="res://assets/images/Parts/amrs/vampire-arm.png" id="2_oepko"]
 
 [resource]
 script = ExtResource("1_gwe2u")
-partName = ""
-description = ""
+type = 1
+partName = "Vampire's hand"
+description = "Dirty sleazy hand from the high-class vampire."
 texture = ExtResource("2_oepko")
 icon = ExtResource("1_1stfd")
 stats = {

@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_jksl4")
-type = 0
-partName = ""
-description = ""
+type = 3
+partName = "Dragon's finger"
+description = "One would say, that it looks like a really fancy pointer, but no, it's the finger of a very old blue dragon."
 stats = {
 "HP": 10,
 "damagePrimary": 2,

@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_ctiws")
-type = 0
+type = 4
 partName = ""
 description = "What the fuck did you expect???"
 texture = ExtResource("3_btesx")

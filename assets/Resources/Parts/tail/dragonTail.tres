@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_kpxyv")
-type = 0
+type = 4
 partName = ""
 description = ""
 stats = {

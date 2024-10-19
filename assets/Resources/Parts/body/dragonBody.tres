@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_8gej7")
-partName = ""
-description = ""
+type = 2
+partName = "Dragon's scale"
+description = "An incredibly rare alchemical component also known as the scale of the blue dragon."
 stats = {
 "HP": 20,
 "damagePrimary": 0,

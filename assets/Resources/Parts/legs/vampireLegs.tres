@@ -6,9 +6,9 @@
 
 [resource]
 script = ExtResource("1_uvw0q")
-type = 0
-partName = ""
-description = ""
+type = 3
+partName = "Vampire's boot"
+description = "The old-fashioned shoe once worn by a pretty dirty vampire. It's rare that it's not covered in blackish redish blood, really."
 texture = ExtResource("3_8hmix")
 icon = ExtResource("1_k7rh4")
 stats = {

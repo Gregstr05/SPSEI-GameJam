@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_ai5p2")
+type = 0
 partName = ""
 description = ""
 stats = {

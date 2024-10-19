@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_l02ke")
 type = 0
-partName = ""
-description = ""
+partName = "Wendigo's antler"
+description = "One of the once mythical magnificent antlers, now covered with moss and destroyed by the passage of time."
 texture = ExtResource("3_wj0ur")
 icon = ExtResource("1_fte6h")
 stats = {

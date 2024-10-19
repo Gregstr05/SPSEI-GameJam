@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_u7vph")
-partName = ""
-description = ""
+type = 0
+partName = "Dragon's eyeball"
+description = "Quite brutally torn eyeball of a still living blue dragon."
 stats = {
 "HP": 10,
 "damagePrimary": 6,
