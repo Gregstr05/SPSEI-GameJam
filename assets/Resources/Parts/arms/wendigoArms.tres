@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_16xp1")
 type = 1
-partName = ""
-description = ""
+partName = "Wendigo's claw"
+description = "The very beast-like claw of the mythical wendigo."
 texture = ExtResource("3_wdwwg")
 icon = ExtResource("1_pinx3")
 stats = {
