@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fyxkuinoedqw"
-path="res://.godot/imported/wendigo-arms-icon.PNG-423a97d96b3178edccc488eedc8a9993.ctex"
+uid="uid://dclw3gipqq0vq"
+path="res://.godot/imported/game-icon.PNG-acb26f3ee1ef970413c466b809d22d65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/amrs/icons/wendigo-arms-icon.PNG"
-dest_files=["res://.godot/imported/wendigo-arms-icon.PNG-423a97d96b3178edccc488eedc8a9993.ctex"]
+source_file="res://kritaTemp/game-icon.PNG"
+dest_files=["res://.godot/imported/game-icon.PNG-acb26f3ee1ef970413c466b809d22d65.ctex"]
 
 [params]
 
