@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_kec0h")
 type = 4
-partName = ""
-description = ""
+partName = "Wendigo's tail"
+description = "Not so easy to spot on or to recognize, but it's still part of the algonquian monster also known as wendigo."
 texture = ExtResource("3_gi4sm")
 icon = ExtResource("1_cdmf3")
 stats = {

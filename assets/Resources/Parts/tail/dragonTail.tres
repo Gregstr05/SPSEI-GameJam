@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_kpxyv")
 type = 4
-partName = ""
-description = ""
+partName = "Dragon's tail"
+description = "Length and speed of the whip, but you probably won't survive its swing. The blue dragon's tail, maybe it stroked the hair of the queen of dragons."
 stats = {
 "HP": 5,
 "damagePrimary": 5,

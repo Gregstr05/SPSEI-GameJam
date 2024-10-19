@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_48nok")
 type = 3
-partName = ""
-description = ""
+partName = "Wendigo's bone"
+description = "I think you wouldn't even need a femur breaker to break this, but here it is. Surprisingly not-strong femur bone of the mythical wendigo."
 texture = ExtResource("3_f1u6f")
 icon = ExtResource("1_7uvpf")
 stats = {

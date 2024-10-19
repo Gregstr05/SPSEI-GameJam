@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_ctiws")
 type = 4
-partName = ""
+partName = "Vampire's... tail?"
 description = "What the fuck did you expect???"
 texture = ExtResource("3_btesx")
 icon = ExtResource("1_rkhb1")
