@@ -6,8 +6,8 @@
 [resource]
 script = ExtResource("1_8gej7")
 type = 2
-partName = "Dragon's scale"
-description = "An incredibly rare alchemical component also known as the scale of the blue dragon."
+partName = "Dragon's scales"
+description = "An incredibly rare alchemical component also known as the scales of the blue dragon."
 texture = ExtResource("2_y13f8")
 stats = {
 "HP": 20,
