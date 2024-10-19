@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e0341g1yjl6j"
-path="res://.godot/imported/vampire-legs-icon.PNG-b1cf56d59f013a7ab503ba2f8e544eeb.ctex"
+uid="uid://cs7hs75owpogv"
+path="res://.godot/imported/dragon-arms-icon.PNG-2204b785e157711652bf6b804a0af80b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Parts/legs/icons/vampire-legs-icon.PNG"
-dest_files=["res://.godot/imported/vampire-legs-icon.PNG-b1cf56d59f013a7ab503ba2f8e544eeb.ctex"]
+source_file="res://assets/images/Parts/amrs/icons/dragon-arms-icon.PNG"
+dest_files=["res://.godot/imported/dragon-arms-icon.PNG-2204b785e157711652bf6b804a0af80b.ctex"]
 
 [params]
 

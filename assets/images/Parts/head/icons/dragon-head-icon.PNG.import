@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3g5lkqulhtn"
-path="res://.godot/imported/vampire.tail-icon.png-06a3911f17800886b3f4d451a904cd82.ctex"
+uid="uid://d0lujomk7nyqy"
+path="res://.godot/imported/dragon-head-icon.PNG-d946dea1b9c63077bccd84c0231e6099.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Parts/tail/icons/vampire.tail-icon.png"
-dest_files=["res://.godot/imported/vampire.tail-icon.png-06a3911f17800886b3f4d451a904cd82.ctex"]
+source_file="res://assets/images/Parts/head/icons/dragon-head-icon.PNG"
+dest_files=["res://.godot/imported/dragon-head-icon.PNG-d946dea1b9c63077bccd84c0231e6099.ctex"]
 
 [params]
 
