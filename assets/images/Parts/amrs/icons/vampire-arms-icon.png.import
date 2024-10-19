@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfitd1vbpcsu6"
-path="res://.godot/imported/vampire-arms-icon.png-48acd3f09e67fab30e5d4fa990658973.ctex"
+uid="uid://bnp5r6hm5dgwl"
+path="res://.godot/imported/vampire-arms-icon.PNG-1b84091d78e3134bb19a174e8e4fa520.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Parts/amrs/icons/vampire-arms-icon.png"
-dest_files=["res://.godot/imported/vampire-arms-icon.png-48acd3f09e67fab30e5d4fa990658973.ctex"]
+source_file="res://assets/images/Parts/amrs/icons/vampire-arms-icon.PNG"
+dest_files=["res://.godot/imported/vampire-arms-icon.PNG-1b84091d78e3134bb19a174e8e4fa520.ctex"]
 
 [params]
 

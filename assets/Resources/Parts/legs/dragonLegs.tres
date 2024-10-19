@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_jksl4")
+type = 0
 partName = ""
 description = ""
 stats = {
