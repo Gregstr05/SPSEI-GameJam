@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk45aopdfauq8"
-path="res://.godot/imported/dragon-legs-back.png-599d0f498a2e2014791a2ecb8afbf160.ctex"
+path="res://.godot/imported/dragon-legs-back.png-ae262dfd26e3c655da29e22184580d63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/back-legs/dragon-legs-back.png"
-dest_files=["res://.godot/imported/dragon-legs-back.png-599d0f498a2e2014791a2ecb8afbf160.ctex"]
+source_file="res://assets/images/Parts/back-legs/dragon-legs-back.png"
+dest_files=["res://.godot/imported/dragon-legs-back.png-ae262dfd26e3c655da29e22184580d63.ctex"]
 
 [params]
 

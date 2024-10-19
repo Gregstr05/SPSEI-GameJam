@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1ur3fk3bn6y1"
-path="res://.godot/imported/werewolf-legs-icon.png-241acc5fa78aa6b7e368cce0c5996573.ctex"
+path="res://.godot/imported/werewolf-legs-icon.png-287449ee22929b0c796d250b7b265c25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/legs/icons/werewolf-legs-icon.png"
-dest_files=["res://.godot/imported/werewolf-legs-icon.png-241acc5fa78aa6b7e368cce0c5996573.ctex"]
+source_file="res://assets/images/Parts/legs/icons/werewolf-legs-icon.png"
+dest_files=["res://.godot/imported/werewolf-legs-icon.png-287449ee22929b0c796d250b7b265c25.ctex"]
 
 [params]
 

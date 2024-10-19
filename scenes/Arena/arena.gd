@@ -53,14 +53,14 @@ func _change_buttons_state(state :bool):
 func _get_desired_secondary_state():
 	if is_player_round:
 		if roundNum%$PlayerSpawn.get_child(0).SecondaryCooldown == 0 or roundNum == 0:
-			return true
-	return false
+			return false
+	return true
 
 func _get_desired_heal_state():
 	if is_player_round:
 		if roundNum%$PlayerSpawn.get_child(0).HealCooldown == 0:
-			return true
-	return false
+			return false
+	return true
 
 func _on_primary_pressed() -> void:
 	$PlayerSpawn.AttackPrimary()

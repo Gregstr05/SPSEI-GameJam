@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="monsterEnemy" load_steps=2 format=3 uid="uid://brml05676fll2"]
-
-[ext_resource type="Script" path="res://assets/resources/Definitions/monsterEnemy.gd" id="1_rem5d"]
-
-[resource]
-script = ExtResource("1_rem5d")
-Name = ""

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpfq27a3o11mc"
-path="res://.godot/imported/wendigo-arms-back.png-ed01aea6140263f142b9b75d1efd12d7.ctex"
+path="res://.godot/imported/wendigo-arms-back.png-e0a9a13f72384c18b3070662cc3b578f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/back-arms/wendigo-arms-back.png"
-dest_files=["res://.godot/imported/wendigo-arms-back.png-ed01aea6140263f142b9b75d1efd12d7.ctex"]
+source_file="res://assets/images/Parts/back-arms/wendigo-arms-back.png"
+dest_files=["res://.godot/imported/wendigo-arms-back.png-e0a9a13f72384c18b3070662cc3b578f.ctex"]
 
 [params]
 

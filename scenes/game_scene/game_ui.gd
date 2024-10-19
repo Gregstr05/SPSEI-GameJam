@@ -2,8 +2,8 @@ extends Control
 
 @export var win_scene : PackedScene
 @export var lose_scene : PackedScene
-@export var Enemies :Array[monsterEnemy]
-
+@export var Enemies :Array[monsterEnemyResource]
+@export var Enemies2 :Array[monsterEnemyResource]
 func _ready():
 	InGameMenuController.scene_tree = get_tree()
 	print(EnemyGlobal.Enemy)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd75al805htgb"
-path="res://.godot/imported/werewolf-tail-icon.png-bca4a9cadce189e6c0760ec38350450c.ctex"
+path="res://.godot/imported/werewolf-tail-icon.png-e70ce625563c31052edb6cea7b663c34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/tail/icons/werewolf-tail-icon.png"
-dest_files=["res://.godot/imported/werewolf-tail-icon.png-bca4a9cadce189e6c0760ec38350450c.ctex"]
+source_file="res://assets/images/Parts/tail/icons/werewolf-tail-icon.png"
+dest_files=["res://.godot/imported/werewolf-tail-icon.png-e70ce625563c31052edb6cea7b663c34.ctex"]
 
 [params]
 

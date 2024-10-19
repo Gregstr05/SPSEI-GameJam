@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6wqud8l7co87"
-path="res://.godot/imported/dragon-tail.png-6a78b4804829f9dfc6cdd600a87d3225.ctex"
+path="res://.godot/imported/dragon-tail.png-5d094a61808cbbaaf0ed23e62412889d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/tail/dragon-tail.png"
-dest_files=["res://.godot/imported/dragon-tail.png-6a78b4804829f9dfc6cdd600a87d3225.ctex"]
+source_file="res://assets/images/Parts/tail/dragon-tail.png"
+dest_files=["res://.godot/imported/dragon-tail.png-5d094a61808cbbaaf0ed23e62412889d.ctex"]
 
 [params]
 

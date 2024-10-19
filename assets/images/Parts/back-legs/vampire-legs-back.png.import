@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjludirx2bb1e"
-path="res://.godot/imported/vampire-legs-back.png-635cfcf1634b3bd12cb1c93577858adb.ctex"
+path="res://.godot/imported/vampire-legs-back.png-b7a116731b7d100c84ea609509415fb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/back-legs/vampire-legs-back.png"
-dest_files=["res://.godot/imported/vampire-legs-back.png-635cfcf1634b3bd12cb1c93577858adb.ctex"]
+source_file="res://assets/images/Parts/back-legs/vampire-legs-back.png"
+dest_files=["res://.godot/imported/vampire-legs-back.png-b7a116731b7d100c84ea609509415fb3.ctex"]
 
 [params]
 

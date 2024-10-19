@@ -78,8 +78,10 @@ func _ready():
 		# Text files get a `.remap` extension added on export.
 		_refresh_files()
 	if auto_load:
-		load_level_scene("res://scenes/MonsterMaker/MonsterMaker.tscn")
-		EnemyGlobal.Enemy.append_array($"..".Enemies)
+		for enemy in $"..".Enemies2:
+			print(enemy)
+			EnemyGlobal.Enemy.append(enemy)
 		EnemyGlobal._asign_parts()
+		load_level_scene("res://scenes/MonsterMaker/MonsterMaker.tscn")
 		#load_level_scene(Default_scene_path)
 		#load_level()

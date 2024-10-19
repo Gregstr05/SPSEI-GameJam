@@ -1,6 +1,6 @@
 extends Node
 
-var Enemy : Array[monsterEnemy]
+var Enemy : Array[monsterEnemyResource]
 var ActiveEnemy :Dictionary
 var ActiveEnemyName :String
 var EnemyIndex : int = 0

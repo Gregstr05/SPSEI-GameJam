@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="monsterEnemy" load_steps=7 format=3 uid="uid://g0kc1uwwgje7"]
+[gd_resource type="Resource" script_class="monsterEnemyResource" load_steps=7 format=3 uid="uid://g0kc1uwwgje7"]
 
-[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterEnemy.gd" id="1_bbwt5"]
+[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterEnemyResource.gd" id="1_bbwt5"]
 [ext_resource type="Resource" uid="uid://d0dd2v2sgouv6" path="res://assets/Resources/Parts/arms/wendigoArms.tres" id="1_gadx8"]
 [ext_resource type="Resource" uid="uid://bgb3nmos0xkqd" path="res://assets/Resources/Parts/body/wendigoBody.tres" id="2_q4243"]
 [ext_resource type="Resource" uid="uid://bicakmq2abppq" path="res://assets/Resources/Parts/head/wendigoHead.tres" id="3_lngjs"]

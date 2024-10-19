@@ -45,8 +45,8 @@ func _enemy_round():
 	var PlayerHP = get_parent()._get_player_hp()
 	var PlayerMaxHP = $"../HUD/Control/Player".max_health
 	
-	if HP < .5*maxHP:
-		HealAttack()
+	#if HP < .5*maxHP:
+		#HealAttack()
 	if PlayerHP < .5*PlayerMaxHP:
 		AttackPrimary()
 	if PlayerHP > 0:

@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://0eicg0lgxow6"]
 
-[ext_resource type="Texture2D" uid="uid://e0341g1yjl6j" path="res://assets/images/Parts/legs/icons/vampire-legs-icon.PNG" id="1_jl8m3"]
+[ext_resource type="Texture2D" uid="uid://e0341g1yjl6j" path="res://assets/images/Parts/legs/icons/vampire-legs-icon.png" id="1_jl8m3"]
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_uvw0q"]
-[ext_resource type="Texture2D" uid="uid://3ppb1b64up5x" path="res://assets/images/Parts/legs/vampire-legs.png" id="3_8hmix"]
+[ext_resource type="Texture2D" uid="uid://cr6un1ixkfrmp" path="res://assets/images/Parts/legs/vampire-leg.png" id="3_rm852"]
 
 [resource]
 script = ExtResource("1_uvw0q")
 type = 3
 partName = "Vampire's boot"
 description = "The old-fashioned shoe once worn by a pretty dirty vampire. It's rare that it's not covered in blackish redish blood, really."
-texture = ExtResource("3_8hmix")
+texture = ExtResource("3_rm852")
 icon = ExtResource("1_jl8m3")
 stats = {
 "HP": -5,
