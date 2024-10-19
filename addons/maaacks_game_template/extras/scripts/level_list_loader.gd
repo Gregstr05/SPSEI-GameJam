@@ -29,16 +29,18 @@ func get_level_file(level_id : int = get_default_level()):
 		level_id = files.size() - 1
 	return files[level_id]
 
-
+func advance_and_load_level():
+	if advance_level():
+		load_level()
 
 func advance_level() -> bool:
-	var level_id : int = get_default_level()
-	level_id += 1
-	if level_id >= files.size():
+	#var level_id : int = get_default_level()
+	EnemyGlobal.EnemyIndex += 1
+	if EnemyGlobal.EnemyIndex >= EnemyGlobal.Enemy.size():
 		emit_signal("levels_finished")
-		level_id = files.size() - 1
+		EnemyGlobal.EnemyIndex = EnemyGlobal.Enemy.size() - 1
 		return false
-	GameLevelLog.level_reached(level_id)
+	GameLevelLog.level_reached(EnemyGlobal.EnemyIndex)
 	return true
 
 func _attach_level(level_resource : Resource):

@@ -13,7 +13,7 @@ texture = ExtResource("3_wj0ur")
 icon = ExtResource("1_fte6h")
 stats = {
 "HP": -20,
-"damagePrimary": 30,
+"damagePrimary": 10,
 "damageSecondary": 20,
 "heal": -2,
 "healCooldown": 1,

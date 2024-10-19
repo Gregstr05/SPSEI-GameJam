@@ -2,9 +2,11 @@ extends Control
 
 @export var win_scene : PackedScene
 @export var lose_scene : PackedScene
+@export var Enemies :Array[monsterEnemy]
 
 func _ready():
 	InGameMenuController.scene_tree = get_tree()
+	EnemyGlobal.Enemy.append_array(Enemies)
 
 func _on_level_lost():
 	InGameMenuController.open_menu(lose_scene, get_viewport())

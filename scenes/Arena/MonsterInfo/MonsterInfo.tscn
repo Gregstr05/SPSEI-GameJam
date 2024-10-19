@@ -47,5 +47,6 @@ material = SubResource("CanvasItemMaterial_50q04")
 layout_mode = 2
 size_flags_vertical = 3
 step = 1.0
-value = 54.0
+value = 53.0
+allow_lesser = true
 show_percentage = false

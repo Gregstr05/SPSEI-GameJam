@@ -8,6 +8,7 @@ signal level_lost
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_set_max_healths()
 	pass # Replace with function body.
 
 
@@ -15,12 +16,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _load_parts():
-	
+func _set_max_healths():
+	$HUD/Control/Enemy._set_max_health($EnemySpawn.get_child(0).HP)
+	$HUD/Control/Player._set_max_health($PlayerSpawn.get_child(0).HP)
 	pass
 
 
 func _on_primary_pressed() -> void:
+	$PlayerSpawn.AttackPrimary()
 	pass # Replace with function body.
 
 

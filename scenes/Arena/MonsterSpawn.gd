@@ -13,9 +13,11 @@ signal SecondaryAttack(damage :int)
 signal Heal(amount :int)
 signal HealthChanged(health :int)
 
+var MonsterInstance
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var MonsterInstance = MonsterScene.instantiate()
+	MonsterInstance = MonsterScene.instantiate()
 	if player:
 		MonsterInstance.Monster["Head"] = MonsterGlobal.PlayerMonster["Head"]
 		MonsterInstance.Monster["Arms"] = MonsterGlobal.PlayerMonster["Arms"]
@@ -30,6 +32,7 @@ func _ready() -> void:
 	MonsterInstance.PrimaryAttack.connect(_primaryAttack)
 	MonsterInstance.SecondaryAttack.connect(_secondaryAttack)
 	MonsterInstance.Heal.connect(_heal)
+	HealthChanged.emit(get_child(0).HP)
 	pass # Replace with function body.
 
 func _get_enemy_monster():
@@ -37,6 +40,19 @@ func _get_enemy_monster():
 
 	Monster = DefaultEnemy
 	return DefaultEnemy
+
+func AttackPrimary():
+	var damage = 10
+	for part in get_child(0).Monster:
+		damage += get_child(0).Monster[part].stats["damagePrimary"]
+	PrimaryAttack.emit(damage)
+
+func _recieve_damage(damage :int):
+	get_child(0).HP -= damage
+	print(get_child(0).HP)
+	HealthChanged.emit(get_child(0).HP)
+	if get_child(0).HP <= 0:
+		_died()
 
 func _died():
 	died.emit()

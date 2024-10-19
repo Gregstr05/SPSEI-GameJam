@@ -18,8 +18,14 @@ func _ready() -> void:
 	$Legs.texture = Monster["Legs"].texture
 	$Tail.texture = Monster["Tail"].texture
 	
+	print("Health: %d" % _calculate_health())
 	pass # Replace with function body.
 
+func _calculate_health() -> int:
+	for part in Monster:
+		HP += Monster[part].stats["HP"]
+	return HP
+	
 func _make_enemy():
 	for child in get_children():
 		child.flip_h = true
