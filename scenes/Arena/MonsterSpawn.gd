@@ -85,6 +85,8 @@ func AttackSecondary():
 	return true
 
 func _recieve_damage(damage :int):
+	if damage<0:
+		damage = 10
 	get_child(0).HP -= damage
 	print(get_child(0).HP)
 	HealthChanged.emit(get_child(0).HP)
