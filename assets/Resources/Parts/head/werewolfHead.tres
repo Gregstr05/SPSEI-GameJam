@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=2 format=3 uid="uid://dfmjdp4om3fcf"]
+[gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://dfmjdp4om3fcf"]
 
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_ai5p2"]
+[ext_resource type="Texture2D" uid="uid://bxnyclhf6emvc" path="res://assets/images/parts/head/icons/werewolf-head-icon.png" id="1_kproj"]
+[ext_resource type="Texture2D" uid="uid://dykawt5larjbw" path="res://assets/images/parts/head/werewolf-head.png" id="3_hkryx"]
 
 [resource]
 script = ExtResource("1_ai5p2")
 type = 0
-partName = ""
-description = ""
+partName = "Werewolf's collar"
+description = "Even if a werewolf is a bloodlust monster constantly trying to kill someone... Sometimes you just don't want to match stereotypes. Cartoon red collar of a horrific werewolf."
+texture = ExtResource("3_hkryx")
+icon = ExtResource("1_kproj")
 stats = {
 "HP": -10,
 "damagePrimary": 5,

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://o18sptmg0i6t"]
 
 [ext_resource type="Script" path="res://scenes/MonsterMaker/monsterPart/monster_part.gd" id="1_ud8i7"]
-[ext_resource type="Texture2D" uid="uid://bhkh7xe2t8pbh" path="res://assets/images/Parts/Blank/blank_slot.png" id="2_ecai6"]
+[ext_resource type="Texture2D" uid="uid://bhkh7xe2t8pbh" path="res://assets/images/parts/blank/blank_slot.png" id="2_ecai6"]
 [ext_resource type="PackedScene" uid="uid://woajsu1pumwp" path="res://scenes/MonsterMaker/MonsterPartPreview/MonsterPartPreview.tscn" id="3_w60kx"]
 
 [node name="MonsterPart" type="Control"]
