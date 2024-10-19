@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=2 format=3 uid="uid://c0agt1cpq774x"]
+[gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://c0agt1cpq774x"]
 
+[ext_resource type="Texture2D" uid="uid://cp3x2wbjxr6ps" path="res://assets/images/parts/body/icons/werewolf-body-icon.png" id="1_f2ect"]
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_y0xuo"]
+[ext_resource type="Texture2D" uid="uid://dgufl7gvnnktv" path="res://assets/images/parts/body/werewolf-body.png" id="3_jhmx2"]
 
 [resource]
 script = ExtResource("1_y0xuo")
 type = 2
-partName = ""
-description = ""
+partName = "Werewolf's fur"
+description = "You need to be a witcher to kill a werewolf, you might think. But some people are just built different, killing this beast with a silver arrow. Impressive."
+texture = ExtResource("3_jhmx2")
+icon = ExtResource("1_f2ect")
 stats = {
 "HP": 0,
 "damagePrimary": -1,
