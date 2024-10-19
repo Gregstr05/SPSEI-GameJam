@@ -12,8 +12,10 @@ signal PrimaryAttack(damage :int)
 signal SecondaryAttack(damage :int)
 signal Heal(amount :int)
 signal HealthChanged(health :int)
+signal RoundEnd
 
 var MonsterInstance
+var PlayerMonster 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,23 +37,51 @@ func _ready() -> void:
 	HealthChanged.emit(get_child(0).HP)
 	pass # Replace with function body.
 
+func _enemy_round():
+	var HP = get_child(0).HP
+	var maxHP = $"../HUD/Control/Enemy".max_health
+	var PlayerHP = get_parent()._get_player_hp()
+	var PlayerMaxHP = $"../HUD/Control/Player".max_health
+	
+	if HP < .5*maxHP:
+		HealAttack()
+	if PlayerHP < .5*PlayerMaxHP:
+		AttackPrimary()
+	if PlayerHP > 0:
+		if AttackSecondary():
+			return
+		AttackPrimary()
+
 func _get_enemy_monster():
 	var Monster :Dictionary
 
 	Monster = DefaultEnemy
 	return DefaultEnemy
 
+func HealAttack():
+	var heal = 10
+	for part in get_child(0).Monster:
+		heal += get_child(0).Monster[part].stats["heal"]
+	Heal.emit(heal)
+	HealthChanged.emit(get_child(0).HP)
+	RoundEnd.emit()
+
 func AttackPrimary():
 	var damage = 10
 	for part in get_child(0).Monster:
 		damage += get_child(0).Monster[part].stats["damagePrimary"]
 	PrimaryAttack.emit(damage)
+	RoundEnd.emit()
 
 func AttackSecondary():
+	if !get_parent()._can_secondary():
+		return false
 	var damage = 20
 	for part in get_child(0).Monster:
 		damage += get_child(0).Monster[part].stats["damageSecondary"]
 	PrimaryAttack.emit(damage)
+	RoundEnd.emit()
+	return true
 
 func _recieve_damage(damage :int):
 	get_child(0).HP -= damage

@@ -19,20 +19,30 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func _get_player_hp():
+	return $PlayerSpawn.get_child(0).HP
+
 func _set_max_healths():
 	$HUD/Control/Enemy._set_max_health($EnemySpawn.get_child(0).HP)
 	$HUD/Control/Player._set_max_health($PlayerSpawn.get_child(0).HP)
 	pass
 
+func _can_secondary():
+	if roundNum%$EnemySpawn.get_child(0).SecondaryCooldown == 0 or roundNum == 0:
+		return true
+	return false
+
 func _switch_sides():
 	if is_player_round:
 		is_player_round = false
 		_change_buttons_state(false)
+		$EnemySpawn._enemy_round()
 	else:
 		is_player_round = true
 		roundNum += 1
 		_change_buttons_state(true)
-	
+
+
 
 func _change_buttons_state(state :bool):
 	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Primary.disabled != state
@@ -47,7 +57,7 @@ func _get_desired_secondary_state():
 
 func _get_desired_heal_state():
 	if is_player_round:
-		if roundNum%$PlayerSpawn.get_child(0).HealchrCooldown == 0:
+		if roundNum%$PlayerSpawn.get_child(0).HealCooldown == 0:
 			return true
 	return false
 
@@ -57,10 +67,12 @@ func _on_primary_pressed() -> void:
 
 
 func _on_secondary_pressed() -> void:
+	$PlayerSpawn.AttackSecondary()
 	pass # Replace with function body.
 
 
 func _on_heal_pressed() -> void:
+	$PlayerSpawn.HealAttack()
 	pass # Replace with function body.
 
 
@@ -71,4 +83,9 @@ func _on_enemy_spawn_died() -> void:
 
 func _on_player_spawn_died() -> void:
 	level_lost.emit()
+	pass # Replace with function body.
+
+
+func _on_round_end() -> void:
+	_switch_sides()
 	pass # Replace with function body.
