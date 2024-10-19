@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxq56yby0jj21"
-path="res://.godot/imported/vampire-body.png-8caef2858c4cf61e7625310611ad5f06.ctex"
+path="res://.godot/imported/vampire-body.png-f5c5908d60269bb908c2e43434d8a74a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/body/vampire-body.png"
-dest_files=["res://.godot/imported/vampire-body.png-8caef2858c4cf61e7625310611ad5f06.ctex"]
+source_file="res://assets/images/Parts/body/vampire-body.png"
+dest_files=["res://.godot/imported/vampire-body.png-f5c5908d60269bb908c2e43434d8a74a.ctex"]
 
 [params]
 
