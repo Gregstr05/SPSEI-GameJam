@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djrd22egcg6vn"
-path="res://.godot/imported/arena.png-c4e783d62b659bbc5c6f3014684313c6.ctex"
+path="res://.godot/imported/arena.png-586bd837cd7781d952c8e64e6aff0656.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/arena.png"
-dest_files=["res://.godot/imported/arena.png-c4e783d62b659bbc5c6f3014684313c6.ctex"]
+source_file="res://assets/backgrounds/arena.png"
+dest_files=["res://.godot/imported/arena.png-586bd837cd7781d952c8e64e6aff0656.ctex"]
 
 [params]
 
