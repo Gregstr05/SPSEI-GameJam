@@ -17,5 +17,5 @@ stats = {
 "damageSecondary": 6,
 "heal": -1,
 "healCooldown": 1,
-"secondaryCooldown": -1
+"secondaryCooldown": 0
 }

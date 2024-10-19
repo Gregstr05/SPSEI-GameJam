@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="monsterPart" load_steps=3 format=3 uid="uid://dh84et5v08w5n"]
+[gd_resource type="Resource" script_class="monsterPart" load_steps=4 format=3 uid="uid://dh84et5v08w5n"]
 
 [ext_resource type="Script" path="res://assets/Resources/Definitions/monsterPart.gd" id="1_e4dq1"]
-[ext_resource type="Texture2D" uid="uid://bnt5y5vjlfx25" path="res://assets/images/parts/tail/werewolf-tail.png" id="2_hhsot"]
+[ext_resource type="Texture2D" uid="uid://dd75al805htgb" path="res://assets/images/Parts/tail/icons/werewolf-tail-icon.png" id="1_xnvuk"]
+[ext_resource type="Texture2D" uid="uid://bnt5y5vjlfx25" path="res://assets/images/Parts/tail/werewolf-tail.png" id="2_hhsot"]
 
 [resource]
 script = ExtResource("1_e4dq1")
 type = 4
-partName = ""
+partName = "Werewolf's tail"
 description = ""
 texture = ExtResource("2_hhsot")
+icon = ExtResource("1_xnvuk")
 stats = {
 "HP": 1,
 "damagePrimary": -1,
