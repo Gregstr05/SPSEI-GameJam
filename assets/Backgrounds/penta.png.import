@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfcoxfc06x8i2"
-path="res://.godot/imported/penta.png-6c1840447cccd1f73e227bd501727460.ctex"
+path="res://.godot/imported/penta.png-dda77de4a5c2d739978a69ac190649b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/penta.png"
-dest_files=["res://.godot/imported/penta.png-6c1840447cccd1f73e227bd501727460.ctex"]
+source_file="res://assets/backgrounds/penta.png"
+dest_files=["res://.godot/imported/penta.png-dda77de4a5c2d739978a69ac190649b4.ctex"]
 
 [params]
 

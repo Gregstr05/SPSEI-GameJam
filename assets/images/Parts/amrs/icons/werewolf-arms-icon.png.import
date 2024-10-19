@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fyxkuinoedqw"
-path="res://.godot/imported/wendigo-arms-icon.PNG-423a97d96b3178edccc488eedc8a9993.ctex"
+uid="uid://u633et23oqt7"
+path="res://.godot/imported/werewolf-arms-icon.png-002b611d6ced4eca19c09858a5110964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/amrs/icons/wendigo-arms-icon.PNG"
-dest_files=["res://.godot/imported/wendigo-arms-icon.PNG-423a97d96b3178edccc488eedc8a9993.ctex"]
+source_file="res://assets/images/parts/amrs/icons/werewolf-arms-icon.png"
+dest_files=["res://.godot/imported/werewolf-arms-icon.png-002b611d6ced4eca19c09858a5110964.ctex"]
 
 [params]
 
