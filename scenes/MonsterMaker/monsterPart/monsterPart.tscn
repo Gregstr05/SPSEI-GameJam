@@ -21,3 +21,5 @@ offset_bottom = 40.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ecai6")
 stretch_mode = 2
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]

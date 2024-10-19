@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var Null_part :Texture2D
+
 var Monster :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tail": 0}
 
 var HP :int = 100
@@ -14,11 +16,11 @@ signal Heal(amount :int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Head.texture = Monster["Head"].texture
-	$Arms.texture = Monster["Arms"].texture
-	$Body.texture = Monster["Body"].texture
-	$Legs.texture = Monster["Legs"].texture
-	$Tail.texture = Monster["Tail"].texture
+	$Head.texture = Monster["Head"].texture if typeof(Monster["Head"]) != TYPE_NIL else Null_part
+	$Arms.texture = Monster["Arms"].texture if Monster["Arms"] != TYPE_NIL else Null_part
+	$Body.texture = Monster["Body"].texture if Monster["Body"] != TYPE_NIL else Null_part
+	$Legs.texture = Monster["Legs"].texture if Monster["Legs"] != TYPE_NIL else Null_part
+	$Tail.texture = Monster["Tail"].texture if Monster["Tail"] != TYPE_NIL else Null_part
 	
 	print("Health: %d" % _calculate_health())
 	
