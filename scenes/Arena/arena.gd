@@ -6,6 +6,9 @@ var EnemyMonster :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tai
 signal level_won
 signal level_lost
 
+var round :int = 0
+var is_player_round :bool = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_set_max_healths()
@@ -21,6 +24,19 @@ func _set_max_healths():
 	$HUD/Control/Player._set_max_health($PlayerSpawn.get_child(0).HP)
 	pass
 
+func _switch_sides():
+	if is_player_round:
+		is_player_round = false
+		_change_buttons_state(false)
+	else:
+		is_player_round = true
+		round += 1
+		_change_buttons_state(true)
+	
+
+func _change_buttons_state(state :bool):
+	for button in $HUD/Control/PanelContainer/VBoxContainer/HBoxContainer.get_children():
+		button.disabled = !state
 
 func _on_primary_pressed() -> void:
 	$PlayerSpawn.AttackPrimary()

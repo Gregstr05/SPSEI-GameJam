@@ -47,6 +47,12 @@ func AttackPrimary():
 		damage += get_child(0).Monster[part].stats["damagePrimary"]
 	PrimaryAttack.emit(damage)
 
+func AttackSecondary():
+	var damage = 20
+	for part in get_child(0).Monster:
+		damage += get_child(0).Monster[part].stats["damageSecondary"]
+	PrimaryAttack.emit(damage)
+
 func _recieve_damage(damage :int):
 	get_child(0).HP -= damage
 	print(get_child(0).HP)
