@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream
-uid="uid://dclw3gipqq0vq"
-=======
-uid="uid://bbje40g68kcbq"
->>>>>>> Stashed changes
-path="res://.godot/imported/game-icon.PNG-acb26f3ee1ef970413c466b809d22d65.ctex"
+uid="uid://cwmc87p261qsx"
+path="res://.godot/imported/vampire-tail-icon.png-fa8e047670039caa6fdd7bf356c7a204.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kritaTemp/game-icon.PNG"
-dest_files=["res://.godot/imported/game-icon.PNG-acb26f3ee1ef970413c466b809d22d65.ctex"]
+source_file="res://kritaExports/vampire-tail-icon.png"
+dest_files=["res://.godot/imported/vampire-tail-icon.png-fa8e047670039caa6fdd7bf356c7a204.ctex"]
 
 [params]
 

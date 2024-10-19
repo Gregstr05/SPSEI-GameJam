@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://ymtjfgyepcdl"]
+
+[ext_resource type="Script" path="res://scenes/MonsterMaker/MonsterSchowcase/monster_showcase.gd" id="1_3cojr"]
+[ext_resource type="PackedScene" uid="uid://bvyqyemgmr2dm" path="res://scenes/MonsterScene/MonsterScene.tscn" id="1_h7fq4"]
+[ext_resource type="Resource" uid="uid://d3e0cl5utqj16" path="res://assets/Resources/Parts/tail/vampireTail.tres" id="2_qve34"]
+[ext_resource type="Texture2D" uid="uid://63105qa2hjyf" path="res://assets/images/Parts/tail/vampire-tail.png" id="4_e40rx"]
+
+[node name="MonsterShowcase" type="Node2D"]
+script = ExtResource("1_3cojr")
+Null_part = ExtResource("2_qve34")
+
+[node name="MonsterScene" parent="." instance=ExtResource("1_h7fq4")]
+Null_part = ExtResource("4_e40rx")

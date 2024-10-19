@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="monsterEnemyResource" load_steps=7 format=3 uid="uid://bcpc3t6dxqfqf"]
+
+[ext_resource type="Resource" uid="uid://dex3fekvn48pd" path="res://assets/Resources/Parts/arms/vampireArms.tres" id="1_cr3xw"]
+[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterEnemyResource.gd" id="1_m65xy"]
+[ext_resource type="Resource" uid="uid://8fx7o3trhp8r" path="res://assets/Resources/Parts/body/vampireBody.tres" id="2_2awg0"]
+[ext_resource type="Resource" uid="uid://dbwx6wmjxth4w" path="res://assets/Resources/Parts/head/vampireHead.tres" id="3_jue10"]
+[ext_resource type="Resource" uid="uid://0eicg0lgxow6" path="res://assets/Resources/Parts/legs/vampireLegs.tres" id="4_mmgo0"]
+[ext_resource type="Resource" uid="uid://d3e0cl5utqj16" path="res://assets/Resources/Parts/tail/vampireTail.tres" id="6_8l43g"]
+
+[resource]
+script = ExtResource("1_m65xy")
+Name = "Vampire"
+head = ExtResource("3_jue10")
+arms = ExtResource("1_cr3xw")
+body = ExtResource("2_2awg0")
+legs = ExtResource("4_mmgo0")
+tail = ExtResource("6_8l43g")

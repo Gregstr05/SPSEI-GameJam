@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream
-uid="uid://dclw3gipqq0vq"
-=======
-uid="uid://bbje40g68kcbq"
->>>>>>> Stashed changes
-path="res://.godot/imported/game-icon.PNG-acb26f3ee1ef970413c466b809d22d65.ctex"
+uid="uid://cjpqdwl4o80x6"
+path="res://.godot/imported/werewolf-arms-icon.png-96e053f6b309533b824d8d9ffbdfa038.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kritaTemp/game-icon.PNG"
-dest_files=["res://.godot/imported/game-icon.PNG-acb26f3ee1ef970413c466b809d22d65.ctex"]
+source_file="res://kritaTemp/werewolf-arms-icon.png"
+dest_files=["res://.godot/imported/werewolf-arms-icon.png-96e053f6b309533b824d8d9ffbdfa038.ctex"]
 
 [params]
 
