@@ -3,6 +3,8 @@ extends Node2D
 var Monster :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tail": 0}
 
 var HP :int = 100
+var SecondaryCooldown :int = 2
+var HealCooldown :int = 2
 
 signal died
 signal PrimaryAttack(damage :int)
@@ -19,13 +21,24 @@ func _ready() -> void:
 	$Tail.texture = Monster["Tail"].texture
 	
 	print("Health: %d" % _calculate_health())
+	
 	pass # Replace with function body.
 
 func _calculate_health() -> int:
 	for part in Monster:
 		HP += Monster[part].stats["HP"]
 	return HP
-	
+
+func _calculate_secondary_cooldown():
+	for part in Monster:
+		SecondaryCooldown += Monster[part].stats["secondaryCooldown"]
+	return SecondaryCooldown
+
+func _calculate_heal_cooldwon():
+	for part in Monster:
+		HealCooldown += Monster[part].stats["healCooldown"]
+	return HealCooldown
+
 func _make_enemy():
 	for child in get_children():
 		child.flip_h = true

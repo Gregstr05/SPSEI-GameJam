@@ -6,7 +6,7 @@ var EnemyMonster :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tai
 signal level_won
 signal level_lost
 
-var round :int = 0
+var roundNum :int = 0
 var is_player_round :bool = true
 
 # Called when the node enters the scene tree for the first time.
@@ -30,13 +30,26 @@ func _switch_sides():
 		_change_buttons_state(false)
 	else:
 		is_player_round = true
-		round += 1
+		roundNum += 1
 		_change_buttons_state(true)
 	
 
 func _change_buttons_state(state :bool):
-	for button in $HUD/Control/PanelContainer/VBoxContainer/HBoxContainer.get_children():
-		button.disabled = !state
+	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Primary.disabled != state
+	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Secondary.disabled = _get_desired_secondary_state()
+	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Heal.disabled = _get_desired_heal_state()
+
+func _get_desired_secondary_state():
+	if is_player_round:
+		if roundNum%$PlayerSpawn.get_child(0).SecondaryCooldown == 0 or roundNum == 0:
+			return true
+	return false
+
+func _get_desired_heal_state():
+	if is_player_round:
+		if roundNum%$PlayerSpawn.get_child(0).HealchrCooldown == 0:
+			return true
+	return false
 
 func _on_primary_pressed() -> void:
 	$PlayerSpawn.AttackPrimary()
