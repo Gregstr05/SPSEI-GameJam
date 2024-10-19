@@ -16,19 +16,37 @@ signal Heal(amount :int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Head.texture = Monster["Head"].texture if typeof(Monster["Head"]) != TYPE_NIL else Null_part
-	$Arms.texture = Monster["Arms"].texture if Monster["Arms"] != TYPE_NIL else Null_part
-	$Body.texture = Monster["Body"].texture if Monster["Body"] != TYPE_NIL else Null_part
-	$Legs.texture = Monster["Legs"].texture if Monster["Legs"] != TYPE_NIL else Null_part
-	$Tail.texture = Monster["Tail"].texture if Monster["Tail"] != TYPE_NIL else Null_part
+	_draw_monster()
 	
 	print("Health: %d" % _calculate_health())
 	
 	pass # Replace with function body.
 
+func _draw_monster():
+	if typeof(Monster["Head"]) != TYPE_INT:
+		$Head.texture = Monster["Head"].texture
+	else: $Head.texture = Null_part
+	
+	if typeof(Monster["Arms"]) != TYPE_INT:
+		$Arms.texture = Monster["Arms"].texture
+	else: $Arms.texture = Null_part
+	
+	if typeof(Monster["Body"]) != TYPE_INT:
+		$Body.texture = Monster["Body"].texture
+	else: $Body.texture = Null_part
+	
+	if typeof(Monster["Legs"]) != TYPE_INT:
+		$Legs.texture = Monster["Legs"].texture
+	else: $Legs.texture = Null_part
+	
+	if typeof(Monster["Tail"]) != TYPE_INT:
+		$Tail.texture = Monster["Tail"].texture
+	else: $Tail.texture = Null_part
+
 func _calculate_health() -> int:
 	for part in Monster:
-		HP += Monster[part].stats["HP"]
+		if typeof(Monster[part]) != TYPE_INT:
+			HP += Monster[part].stats["HP"]
 	return HP
 
 func _calculate_secondary_cooldown():

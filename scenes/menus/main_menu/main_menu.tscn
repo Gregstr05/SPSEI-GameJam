@@ -12,7 +12,7 @@ options_packed_scene = ExtResource("2_b1gp6")
 credits_packed_scene = ExtResource("3_lfrmn")
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-text = "Magičmejkr (prozatimní)"
+text = "Concept of Reanimation"
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
-text = "Jak jsme se sem dostali????"
+text = "Undead fight club"
