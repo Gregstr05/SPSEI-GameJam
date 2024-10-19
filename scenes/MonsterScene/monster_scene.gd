@@ -4,7 +4,7 @@ extends Node2D
 
 var Monster :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tail": 0}
 
-var HP :int = 100
+var HP :int = 200
 var SecondaryCooldown :int = 2
 var HealCooldown :int = 2
 

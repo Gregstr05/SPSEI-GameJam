@@ -10,6 +10,7 @@ func _ready():
 
 func _on_level_lost():
 	InGameMenuController.open_menu(lose_scene, get_viewport())
+	MonsterGlobal.PlayerMonster = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tail": 0}
 
 func _on_level_won():
 	$LevelLoader.advance_and_load_level()
