@@ -18,7 +18,8 @@ signal levels_finished
 var current_level : Node
 
 func get_default_level() -> int:
-	return GameLevelLog.get_current_level() if force_level == -1 else force_level
+	return EnemyGlobal.EnemyIndex
+	#return GameLevelLog.get_current_level() if force_level == -1 else force_level
 
 func get_level_file(level_id : int = get_default_level()):
 	if files.is_empty():
@@ -31,7 +32,7 @@ func get_level_file(level_id : int = get_default_level()):
 
 func advance_and_load_level():
 	if advance_level():
-		load_level()
+		load_level_scene("res://scenes/MonsterMaker/MonsterMaker.tscn")
 
 func advance_level() -> bool:
 	#var level_id : int = get_default_level()

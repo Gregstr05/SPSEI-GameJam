@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0wr471xabdk1"
-path="res://.godot/imported/dragon-body-icon.PNG-0f8e1f7eddb7477dabd74502bd227eb7.ctex"
+path="res://.godot/imported/dragon-body-icon.PNG-95ede04ff14fa7a9e0bd1971747a0c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/body/icons/dragon-body-icon.PNG"
-dest_files=["res://.godot/imported/dragon-body-icon.PNG-0f8e1f7eddb7477dabd74502bd227eb7.ctex"]
+source_file="res://assets/images/Parts/body/icons/dragon-body-icon.PNG"
+dest_files=["res://.godot/imported/dragon-body-icon.PNG-95ede04ff14fa7a9e0bd1971747a0c01.ctex"]
 
 [params]
 

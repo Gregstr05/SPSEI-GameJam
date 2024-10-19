@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dotv30gdrwhs4"
-path="res://.godot/imported/wendigo-legs-icon.PNG-5c8b6b726f5d0d182655e6a011882098.ctex"
+path="res://.godot/imported/wendigo-legs-icon.png-bc831fe1a6f499fca19646475188da50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/parts/legs/icons/wendigo-legs-icon.PNG"
-dest_files=["res://.godot/imported/wendigo-legs-icon.PNG-5c8b6b726f5d0d182655e6a011882098.ctex"]
+source_file="res://assets/images/Parts/legs/icons/wendigo-legs-icon.png"
+dest_files=["res://.godot/imported/wendigo-legs-icon.png-bc831fe1a6f499fca19646475188da50.ctex"]
 
 [params]
 

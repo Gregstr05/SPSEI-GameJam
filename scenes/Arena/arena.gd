@@ -24,6 +24,8 @@ func _get_player_hp():
 	return $PlayerSpawn.get_child(0).HP
 
 func _set_max_healths():
+	$EnemySpawn.get_child(0)._calculate_health()
+	$PlayerSpawn.get_child(0)._calculate_health()
 	$HUD/Control/Enemy._set_max_health($EnemySpawn.get_child(0).HP)
 	$HUD/Control/Player._set_max_health($PlayerSpawn.get_child(0).HP)
 	pass

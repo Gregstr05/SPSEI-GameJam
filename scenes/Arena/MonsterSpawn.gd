@@ -40,6 +40,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _enemy_round():
+	await get_tree().create_timer(1).timeout
 	var HP = get_child(0).HP
 	var maxHP = $"../HUD/Control/Enemy".max_health
 	var PlayerHP = get_parent()._get_player_hp()
