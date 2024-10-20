@@ -14,6 +14,8 @@ signal Heal(amount :int)
 signal HealthChanged(health :int)
 signal RoundEnd
 
+signal popup(amount :int)
+
 var MonsterInstance
 var PlayerMonster 
 
@@ -94,6 +96,7 @@ func _recieve_damage(damage :int):
 		damage = 10
 	get_child(0).HP -= damage
 	print(get_child(0).HP)
+	popup.emit(-damage)
 	HealthChanged.emit(get_child(0).HP)
 	if get_child(0).HP <= 0:
 		_died()
@@ -118,6 +121,7 @@ func _process(delta: float) -> void:
 func _on_heal(amount: int) -> void:
 	get_child(0).HP += amount
 	print(get_child(0).HP)
+	popup.emit(amount)
 	HealthChanged.emit(get_child(0).HP)
 	if get_child(0).HP <= 0:
 		_died()
