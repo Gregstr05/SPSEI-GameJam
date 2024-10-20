@@ -79,6 +79,7 @@ func AttackPrimary():
 	for part in get_child(0).Monster:
 		damage += get_child(0).Monster[part].stats["damagePrimary"]
 	PrimaryAttack.emit(damage)
+	_attack_anim()
 	RoundEnd.emit()
 
 func AttackSecondary():
@@ -88,8 +89,15 @@ func AttackSecondary():
 	for part in get_child(0).Monster:
 		damage += get_child(0).Monster[part].stats["damageSecondary"]
 	PrimaryAttack.emit(damage)
+	_attack_anim()
 	RoundEnd.emit()
 	return true
+
+func _attack_anim():
+	var tween = get_tree().create_tween()
+	var original_loc = position
+	tween.tween_property(self, "position", Vector2(0, 0), .2)
+	tween.tween_property(self, "position", original_loc, .4)
 
 func _recieve_damage(damage :int):
 	if damage<0:
