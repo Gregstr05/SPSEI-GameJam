@@ -107,3 +107,9 @@ func _on_reanimate_pressed() -> void:
 	MonsterGlobal._asign_parts()
 	get_tree().get_first_node_in_group("LevelLoader").load_level_scene("res://scenes/Arena/Arena.tscn")
 	pass # Replace with function body.
+
+
+func _on_clear_pressed() -> void:
+	get_tree().call_group("Receptacle", "_reset")
+	%MonsterShowcase._reset()
+	pass # Replace with function body.

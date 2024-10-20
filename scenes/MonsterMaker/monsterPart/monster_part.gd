@@ -14,6 +14,7 @@ signal sendData(data :monsterPart)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Type.hide()
 	if monsterPartInstance == null:
 		$TextureRect.texture = BlankSlotTexture
 	else:
@@ -22,6 +23,10 @@ func _ready() -> void:
 	if receptacle:
 		dropped.emit()
 	pass # Replace with function body.
+
+func _reset():
+	monsterPartInstance = null
+	_ready()
 
 func _get_drag_data(_pos):
 	if receptacle:

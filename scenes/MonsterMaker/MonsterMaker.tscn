@@ -205,6 +205,7 @@ size = Vector2i(360, 640)
 render_target_update_mode = 4
 
 [node name="MonsterShowcase" parent="CanvasLayer/HBoxContainer/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/SubViewportContainer/SubViewport" instance=ExtResource("4_ur43l")]
+unique_name_in_owner = true
 position = Vector2(161.91, 319.05)
 scale = Vector2(0.58, 0.58)
 
@@ -276,11 +277,21 @@ receptacle = true
 
 [node name="MonsterPart5" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect" groups=["Receptacle"] instance=ExtResource("2_10b2e")]
 layout_mode = 0
-offset_left = 488.0
-offset_top = -1.0
-offset_right = 590.4
-offset_bottom = 101.4
+offset_left = 486.0
+offset_top = 1.0
+offset_right = 588.4
+offset_bottom = 103.4
 receptacle = true
+
+[node name="Clear" type="Button" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "Clear"
 
 [node name="Reanimate" type="Button" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -300,4 +311,5 @@ text = "Reanimate"
 [connection signal="dropped" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect/MonsterPart4" to="CanvasLayer/HBoxContainer/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/SubViewportContainer/SubViewport/MonsterShowcase" method="_update_showcase"]
 [connection signal="dropped" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect/MonsterPart5" to="." method="_parts_updated"]
 [connection signal="dropped" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect/MonsterPart5" to="CanvasLayer/HBoxContainer/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer2/SubViewportContainer/SubViewport/MonsterShowcase" method="_update_showcase"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/TextureRect/Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Reanimate" to="." method="_on_reanimate_pressed"]

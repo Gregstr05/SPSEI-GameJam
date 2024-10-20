@@ -7,6 +7,11 @@ func _ready() -> void:
 	_update_showcase()
 	pass # Replace with function body.
 
+func _reset():
+	MonsterGlobal.PlayerMonster = {"Head": Null_part, "Arms": Null_part, "Body": Null_part, "Legs": Null_part, "Tail": Null_part}
+	MonsterGlobal._asign_parts()
+	_update_showcase()
+
 func _update_showcase():
 	print("update showcase")
 	var receptacles = get_tree().get_nodes_in_group("Receptacle")
