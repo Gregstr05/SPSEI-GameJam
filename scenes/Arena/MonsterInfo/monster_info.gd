@@ -1,6 +1,6 @@
 extends Control
 
-var Monstername :String
+var Monstername :String = "Player's monster"
 var health :int
 var max_health :int
 
@@ -12,6 +12,9 @@ func _ready() -> void:
 
 func _set_max_health(max_health):
 	%HealthBar.max_value = max_health
+
+func _set_name(name :String):
+	$Player_info/VBoxContainer/Name.text = name
 
 func _health_changed(health :int):
 	self.health = health

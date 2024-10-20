@@ -12,6 +12,7 @@ var is_player_round :bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_set_max_healths()
+	_set_monster_name()
 	$HUD/Control/Round.text = "Round: %d" % (roundNum + 1)
 	pass # Replace with function body.
 
@@ -22,6 +23,10 @@ func _process(delta: float) -> void:
 
 func _get_player_hp():
 	return $PlayerSpawn.get_child(0).HP
+
+func _set_monster_name():
+	$HUD/Control/Enemy.Monstername = EnemyGlobal.ActiveEnemyName
+	$HUD/Control/Enemy._set_name(EnemyGlobal.ActiveEnemyName)
 
 func _set_max_healths():
 	$EnemySpawn.get_child(0)._calculate_health()

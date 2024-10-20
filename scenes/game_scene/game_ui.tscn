@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dqdwmllvu2lv5"]
+[gd_scene load_steps=15 format=3 uid="uid://dqdwmllvu2lv5"]
 
 [ext_resource type="Script" path="res://scenes/game_scene/game_ui.gd" id="1_solt8"]
 [ext_resource type="PackedScene" uid="uid://epsnjw0ujl7u" path="res://scenes/win_screen/win_screen.tscn" id="2_nfgj1"]
@@ -9,10 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bgvwyanwqphfu" path="res://scenes/menus/pause_menu/pause_menu.tscn" id="5_lfufl"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_list_loader.gd" id="6_b43ns"]
 [ext_resource type="Resource" uid="uid://bcpc3t6dxqfqf" path="res://assets/Resources/Enemies/Vampire.tres" id="6_rop3h"]
-[ext_resource type="Resource" uid="uid://c4ni3irwc56xl" path="res://assets/Resources/Enemies/Werewolf.tres" id="7_g56lu"]
+[ext_resource type="Resource" uid="uid://bhtir7gkfx0kr" path="res://assets/Resources/Enemies/werewolf.tres" id="7_23gw8"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="7_np5mq"]
 [ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="8_wjowe"]
-[ext_resource type="Resource" uid="uid://bkdytes305mut" path="res://assets/Resources/Enemies/Dragon.tres" id="8_ydg16"]
 [ext_resource type="Script" path="res://scenes/game_scene/configurable_sub_viewport.gd" id="9_vodd8"]
 [ext_resource type="Script" path="res://scenes/game_scene/input_display_label.gd" id="10_lmnoo"]
 
@@ -27,7 +26,7 @@ script = ExtResource("1_solt8")
 win_scene = ExtResource("2_nfgj1")
 lose_scene = ExtResource("3_cwxig")
 Enemies = Array[ExtResource("4_3vs3j")]([null, null, null, null])
-Enemies2 = Array[ExtResource("4_3vs3j")]([ExtResource("5_gxiat"), ExtResource("6_rop3h"), ExtResource("7_g56lu"), ExtResource("8_ydg16")])
+Enemies2 = Array[ExtResource("4_3vs3j")]([ExtResource("5_gxiat"), ExtResource("6_rop3h"), ExtResource("7_23gw8")])
 
 [node name="PauseMenuController" type="Node" parent="."]
 script = ExtResource("4_6b6cy")
