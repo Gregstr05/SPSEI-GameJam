@@ -42,19 +42,19 @@ Heal: %s
 Heal Cooldown: %s" % [data.stats["HP"], data.stats["damagePrimary"], data.stats["damageSecondary"], data.stats["secondaryCooldown"], data.stats["heal"], data.stats["healCooldown"]]
 
 func _populate_grid():
-	_add_parts(MonsterDefinitions.head)
-	_add_parts(MonsterDefinitions.arms)
-	_add_parts(MonsterDefinitions.body)
-	_add_parts(MonsterDefinitions.legs)
-	_add_parts(MonsterDefinitions.tail)
+	_add_parts(MonsterDefinitions.head, %Heads)
+	_add_parts(MonsterDefinitions.arms, %Arms)
+	_add_parts(MonsterDefinitions.body, %Bodies)
+	_add_parts(MonsterDefinitions.legs, %Legs)
+	_add_parts(MonsterDefinitions.tail, %Tails)
 
-func _add_parts(part :Array[monsterPart]):
+func _add_parts(part :Array[monsterPart], container :Node):
 	for i in part:
 		var ItemSlot = ItemScene.instantiate()
 		ItemSlot.monsterPartInstance = i
 		ItemSlot.custom_minimum_size = Vector2(102.4, 102.4)
 		ItemSlot.sendData.connect(_recieve_part_data)
-		%GridContainer.add_child(ItemSlot)
+		container.add_child(ItemSlot)
 
 func _parts_updated():
 	var check = 0
