@@ -49,10 +49,13 @@ func _enemy_round():
 	#if HP < .5*maxHP:
 		#HealAttack()
 	if PlayerHP < .5*PlayerMaxHP:
+		print("Attacking primary")
 		AttackPrimary()
 	if PlayerHP > 0:
+		print("Trying secondary")
 		if AttackSecondary():
 			return
+		print("Secondary failed, attacking primary")
 		AttackPrimary()
 
 func _get_enemy_monster():

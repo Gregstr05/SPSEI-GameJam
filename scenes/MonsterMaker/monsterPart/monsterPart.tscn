@@ -22,4 +22,13 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ecai6")
 stretch_mode = 2
 
+[node name="Type" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 103.0
+offset_right = 102.0
+offset_bottom = 126.0
+text = "Hand"
+horizontal_alignment = 1
+
 [connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]

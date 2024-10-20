@@ -2,6 +2,7 @@ extends Control
 
 var monsterPartInstance : monsterPart
 var monsterPartStats : Dictionary
+var monsterPartTypes = ["Head", "Arms", "Body", "Legs", "Tail"]
 
 @export var receptacle :bool = false
 
@@ -67,6 +68,8 @@ func _check_same_part(type) -> bool:
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	monsterPartInstance = data
+	$Type.show()
+	$Type.text = monsterPartTypes[data.type]
 	_ready()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
