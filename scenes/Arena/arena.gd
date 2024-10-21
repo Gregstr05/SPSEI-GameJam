@@ -43,17 +43,17 @@ func _can_secondary():
 func _switch_sides():
 	if is_player_round:
 		is_player_round = false
-		_change_buttons_state(false)
+		_change_buttons_state(true)
 		$EnemySpawn._enemy_round()
 	else:
 		is_player_round = true
 		roundNum += 1
-		_change_buttons_state(true)
+		_change_buttons_state(false)
 
 
 
 func _change_buttons_state(state :bool):
-	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Primary.disabled != state
+	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Primary.disabled = state
 	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Secondary.disabled = _get_desired_secondary_state()
 	$HUD/Control/PanelContainer/VBoxContainer/HBoxContainer/Heal.disabled = _get_desired_heal_state()
 
