@@ -19,6 +19,8 @@ func _ready() -> void:
 	_draw_monster()
 	
 	print("Health: %d" % _calculate_health())
+	_calculate_heal_cooldwon()
+	_calculate_secondary_cooldown()
 	
 	pass # Replace with function body.
 
@@ -51,12 +53,14 @@ func _calculate_health() -> int:
 
 func _calculate_secondary_cooldown():
 	for part in Monster:
-		SecondaryCooldown += Monster[part].stats["secondaryCooldown"]
+		if typeof(Monster[part]) != TYPE_INT:
+			SecondaryCooldown += Monster[part].stats["secondaryCooldown"]
 	return SecondaryCooldown
 
 func _calculate_heal_cooldwon():
 	for part in Monster:
-		HealCooldown += Monster[part].stats["healCooldown"]
+		if typeof(Monster[part]) != TYPE_INT:
+			HealCooldown += Monster[part].stats["healCooldown"]
 	return HealCooldown
 
 func _make_enemy():

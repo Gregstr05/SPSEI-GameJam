@@ -6,6 +6,12 @@ var EnemyMonster :Dictionary = {"Head": 0, "Arms": 0, "Body": 0, "Legs": 0, "Tai
 signal level_won
 signal level_lost
 
+var PlayerHealCooldown = 0
+var PlayerSecondaryCooldown = 0
+
+var EnemyHealCooldown = 0
+var EnemySecondaryCooldown = 0
+
 var roundNum :int = 0
 var is_player_round :bool = true
 
@@ -36,7 +42,12 @@ func _set_max_healths():
 	pass
 
 func _can_secondary():
-	if roundNum%$EnemySpawn.get_child(0).SecondaryCooldown == 0 or roundNum == 0:
+	if EnemySecondaryCooldown == 0:
+		return true
+	return false
+
+func _can_heal():
+	if EnemyHealCooldown == 0:
 		return true
 	return false
 
@@ -59,13 +70,13 @@ func _change_buttons_state(state :bool):
 
 func _get_desired_secondary_state():
 	if is_player_round:
-		if roundNum%$PlayerSpawn.get_child(0).SecondaryCooldown == 0 or roundNum == 0:
+		if PlayerSecondaryCooldown == 0:
 			return false
 	return true
 
 func _get_desired_heal_state():
 	if is_player_round:
-		if roundNum%$PlayerSpawn.get_child(0).HealCooldown == 0:
+		if PlayerHealCooldown == 0:
 			return false
 	return true
 
@@ -76,11 +87,13 @@ func _on_primary_pressed() -> void:
 
 func _on_secondary_pressed() -> void:
 	$PlayerSpawn.AttackSecondary()
+	PlayerSecondaryCooldown = $PlayerSpawn.get_child(0).SecondaryCooldown
 	pass # Replace with function body.
 
 
 func _on_heal_pressed() -> void:
 	$PlayerSpawn.HealAttack()
+	PlayerHealCooldown = $PlayerSpawn.get_child(0).HealCooldown
 	pass # Replace with function body.
 
 
@@ -95,6 +108,14 @@ func _on_player_spawn_died() -> void:
 
 
 func _on_round_end() -> void:
+	if PlayerHealCooldown>0:
+		PlayerHealCooldown-=1
+	if PlayerSecondaryCooldown>0:
+		PlayerSecondaryCooldown-=1
+	if EnemyHealCooldown>0:
+		EnemyHealCooldown-=1
+	if EnemySecondaryCooldown>0:
+		EnemySecondaryCooldown-=1
 	_switch_sides()
 	$HUD/Control/Round.text = "Round: %d" % (roundNum +1)
 	pass # Replace with function body.

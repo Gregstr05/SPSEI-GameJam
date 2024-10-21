@@ -43,21 +43,27 @@ func _ready() -> void:
 
 func _enemy_round():
 	await get_tree().create_timer(1).timeout
-	var HP = get_child(0).HP
-	var maxHP = $"../HUD/Control/Enemy".max_health
+	var HP = $"../HUD/Control/Enemy".health
+	var maxHP = $"../HUD/Control/Enemy/%HealthBar".max_value
 	var PlayerHP = get_parent()._get_player_hp()
-	var PlayerMaxHP = $"../HUD/Control/Player".max_health
+	var PlayerMaxHP = $"../HUD/Control/Player/%HealthBar".max_value
 	
-	#if HP < .5*maxHP:
-		#HealAttack()
-	if PlayerHP < .5*PlayerMaxHP:
-		print("Attacking primary")
-		AttackPrimary()
+	if HP < maxHP*0.5:
+		print("Trying healing")
+		if HealAttack():
+			$"..".EnemyHealCooldown = get_child(0).HealCooldown
+			return
+		print("Heal failed")
+	#	AttackPrimary()
 	if PlayerHP > 0:
 		print("Trying secondary")
 		if AttackSecondary():
+			$"..".EnemySecondaryCooldown = get_child(0).SecondaryCooldown
 			return
 		print("Secondary failed, attacking primary")
+		AttackPrimary()
+	if PlayerHP < .5*PlayerMaxHP:
+		print("Attacking primary")
 		AttackPrimary()
 
 func _get_enemy_monster():
@@ -65,6 +71,8 @@ func _get_enemy_monster():
 	return Monster
 
 func HealAttack():
+	if !get_parent()._can_heal():
+		return false
 	var heal = 10
 	for part in get_child(0).Monster:
 		heal += get_child(0).Monster[part].stats["heal"]
@@ -73,6 +81,7 @@ func HealAttack():
 	Heal.emit(heal)
 	HealthChanged.emit(get_child(0).HP)
 	RoundEnd.emit()
+	return true
 
 func AttackPrimary():
 	var damage = 10
