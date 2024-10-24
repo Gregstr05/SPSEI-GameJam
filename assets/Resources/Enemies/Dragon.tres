@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="monsterEnemyResource" load_steps=7 format=3 uid="uid://vvlbcwnyreit"]
+
+[ext_resource type="Resource" uid="uid://bg4n11udegj8i" path="res://assets/Resources/Parts/arms/dragonArms.tres" id="1_4uecu"]
+[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterEnemyResource.gd" id="1_jibaa"]
+[ext_resource type="Resource" uid="uid://uayufvtvxnmx" path="res://assets/Resources/Parts/body/dragonBody.tres" id="2_6qq35"]
+[ext_resource type="Resource" uid="uid://ctwlsv0py0dap" path="res://assets/Resources/Parts/head/dragonHead.tres" id="3_2c31g"]
+[ext_resource type="Resource" uid="uid://vsc5m1s723cq" path="res://assets/Resources/Parts/legs/dragonLegs.tres" id="4_36iou"]
+[ext_resource type="Resource" uid="uid://bruug7va5t8rf" path="res://assets/Resources/Parts/tail/dragonTail.tres" id="6_gb33i"]
+
+[resource]
+script = ExtResource("1_jibaa")
+Name = "Dragon"
+head = ExtResource("3_2c31g")
+arms = ExtResource("1_4uecu")
+body = ExtResource("2_6qq35")
+legs = ExtResource("4_36iou")
+tail = ExtResource("6_gb33i")
