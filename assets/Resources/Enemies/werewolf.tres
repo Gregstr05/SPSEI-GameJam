@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="monsterEnemyResource" load_steps=7 format=3 uid="uid://bhtir7gkfx0kr"]
+
+[ext_resource type="Script" path="res://assets/Resources/Definitions/monsterEnemyResource.gd" id="1_dxlr8"]
+[ext_resource type="Resource" uid="uid://utsbew8lwqyb" path="res://assets/Resources/Parts/arms/werewolfArms.tres" id="1_ekiog"]
+[ext_resource type="Resource" uid="uid://c0agt1cpq774x" path="res://assets/Resources/Parts/body/werewolfBody.tres" id="2_e14q4"]
+[ext_resource type="Resource" uid="uid://dfmjdp4om3fcf" path="res://assets/Resources/Parts/head/werewolfHead.tres" id="3_u8diu"]
+[ext_resource type="Resource" uid="uid://ckrem7kiwu4lo" path="res://assets/Resources/Parts/legs/werewolfLegs.tres" id="4_tocqs"]
+[ext_resource type="Resource" uid="uid://dh84et5v08w5n" path="res://assets/Resources/Parts/tail/werewolfTail.tres" id="6_lql3o"]
+
+[resource]
+script = ExtResource("1_dxlr8")
+Name = "Werewolf"
+head = ExtResource("3_u8diu")
+arms = ExtResource("1_ekiog")
+body = ExtResource("2_e14q4")
+legs = ExtResource("4_tocqs")
+tail = ExtResource("6_lql3o")
